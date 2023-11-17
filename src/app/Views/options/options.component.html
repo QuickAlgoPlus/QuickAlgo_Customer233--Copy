@@ -1,0 +1,1002 @@
+<app-header></app-header>
+<style>
+    ::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+      @media (min-width: 576px){
+          .modal-dialog {
+              max-width: 550px;
+              
+          }
+      }
+      .muy-4 {
+          margin-bottom: 0.5rem !important;
+      }
+       .green {
+    color:#00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important;
+  }
+      .mb-3{
+        margin-bottom: 5px !important;
+      }
+      @media (min-width: 576px){
+          .modal-dialog {
+              max-width: 550px;
+              
+          }
+      }
+      .form-switch.form-check .form-check-input{
+          border-radius: 13px;
+          width: 4em;
+          height: 2em;
+      }
+      .nav-tabs-data{
+        margin-top: 40px;
+      }
+      .button-tabs{
+        float: right;
+        margin-top: -55px
+      }
+      .padding-top{
+        padding-top: 10px;
+      }
+      .padding-full-15{
+        padding: 15px;
+      }
+      .padding-b-15{
+        margin-bottom: 20px
+      }
+      .padding-bag-15{
+        border: 1px solid #dbdbdb;padding: 15px;
+      }
+      .padding-bag-10{
+        margin-top: 10px;
+        border-top: 1px solid #e8e5e5;
+        padding: 10px;
+        border-color: #585858;
+      }
+      .ma-right{
+        margin-right:15px;
+      }
+      .center{
+        text-align: center;
+      }
+      .o-h-l-p{
+        margin: 15px 0px;text-align: center;border: 1px solid;border-left: 0px;border-right: 0px;padding: 10px 0px;
+        border-color: #378488;
+      }
+      .background{
+        background: #378488;
+      }
+      .padding-10{
+        padding: 10px 0px 0px 0px;
+      }
+      .float-right{
+        float: right;
+      }
+      .text-border{
+        border: 1px solid #e6e6e6;
+        border-color: #585858;
+      }
+      .text-right{
+        text-align: right;
+      }
+      .col-12-1{
+        padding: 0px;
+      }
+      .padding-15{
+        --bs-gutter-x: 1.5rem;
+      }
+      .p-m-t{
+        padding: 0px;margin-top: -100px;
+      }
+      
+      .cta-2 {
+        margin-top: -5px;
+      }
+      .mar-hig{
+        height: 30px;
+      margin: auto;
+      }
+      .mar-righ{
+        margin-right: -20px
+      }
+      .mb-0{
+        padding-left:0px;
+      }
+      .filled .form-control {
+      min-height: 35px;
+      background: var(--background-light);
+      padding-left: 15px;
+  }
+  
+  .justify-content-center{
+    justify-content: center !important;
+  }
+  .mar-righ-15{
+    margin-left: 25px;
+      width: 90px;
+  }
+  .h-auto{
+    height: auto;
+  }
+  .mar-b-0{
+    margin-top: 10px;
+    margin-bottom:0px
+  }
+  .white{
+    color: #d9d9d9 !important;
+  }
+  input {
+    color-scheme: dark;
+  }
+  .mar-top-23{
+    margin-top: 23px
+  }
+  .text-truncate {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: pre-wrap;
+  }
+  .sh-md-8 {
+    margin: 10px;
+  }
+  .h-100 {
+    font-size: 90.5%;
+}
+.text-small {
+    font-size: 0.9em !important;
+}
+.btn-primary, .btn-primary:not(:disabled):not(.disabled):focus, .btn-primary:not(:disabled):not(.disabled).focus{
+  background: #d5365c;
+}
+.btn-icon {
+    padding: 10px 10px;
+}
+.btn-icon svg{
+  width: 12px;
+}
+td:hover{
+  color: var(--primary)
+}
+.nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+}
+.nify-row1{
+  position: fixed;
+      top: 20px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      display: flex !important;
+}
+.nify-row2{
+  position: fixed;
+      top: 197px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 50%;
+      z-index: 1000;
+}
+.nify-row3{
+  position: fixed;
+      top: 230px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 50%;
+      z-index: 1000;
+}
+.nify-row4{
+  position: fixed;
+  top: 197px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 50%;
+      z-index: 1000;
+      left:50%;
+}
+.nify-row5{
+  position: fixed;
+  top: 230px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 50%;
+      z-index: 1000;
+      left:50%;
+}
+.nify-row7{
+  position: fixed;
+    top: 240px;
+    padding-bottom: 15px;
+    background: #FFF !important;
+    left: 53px;
+    width: 50%;
+    z-index: 1000;
+    display: inherit!important;
+    padding-right: 65px;
+}
+.nify-row6{
+  position: fixed;
+  top: 240px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 50%;
+      
+      z-index: 1000;
+      left:50%;
+      display: inherit!important; 
+      padding-right: 45px;
+}
+@media (max-width: 991px) {
+.padd-top-30{
+    padding-top: 30px;
+  }
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+.dataTable{
+  margin-top: 0.5rem !important;
+}
+.desktopview{
+  display: revert !important;
+}
+.mobileview{
+  display: none !important;
+}
+}
+  @media (min-width: 992px) {
+.padd-top-30{
+    padding-top: 0px;
+  }
+  .mt-4 {
+    margin-top: 7.9rem !important;
+}
+.dataTable{
+  margin-top: 14.5rem !important;
+}
+
+  }
+ 
+table.dataTable tbody th, table.dataTable tbody td {
+    padding: 8px 8px;
+}
+/* table tbody.datatabledata {
+  display: block;
+  max-height: 350px;
+  overflow-y: scroll;
+} */
+
+.dark-red-w{
+    color: darkred;
+    font-weight: 800;
+  }
+  .dark-green-w{
+    color: #03b103;
+    font-weight: 800;
+  }
+  </style>
+<main>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="mb-5">
+            <div >
+              <div class="row g-2 nify-row d-flex mobileview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2 desktopview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-4 nify-row1 mobileview">
+              <div class="col-lg-2 mar-t-b-right">
+                <select (change)="toptionlistallid2()" id="Category1" class=" mb-2 nice-select wide wide1 form-select">
+                  <!-- <option value="0" selected>All</option> -->
+                  <option value="{{mQ.product}}" *ngFor="let mQ of SymbolListByCategory">{{mQ.product}}</option>
+                </select>
+                </div>
+                <div class="col-lg-2 mar-t-b-right">
+                    <select (change)="toptionlistallid2()" id="expiry" class="mb-2 nice-select wide wide1 form-select">
+                      <option value="{{mQ}}" *ngFor="let mQ of toptionexpiry">{{mQ}}</option>
+                    </select>
+                    </div>
+                    <div class="col-lg-2 mar-t-b-right">
+                      <input type="text" id="myInput" class="form-control mb-2" placeholder="Search Option List" >
+                      </div>
+                
+                </div>
+                <div class="row mt-4 desktopview">
+                  <div class="col-lg-2 mar-t-b-right">
+                      <select (change)="toptionlistallid1()" id="Category" class=" mb-2 nice-select wide wide1 form-select">
+                        <!-- <option value="0" selected>All</option> -->
+                        <option value="{{mQ.product}}" *ngFor="let mQ of SymbolListByCategory">{{mQ.product}}</option>
+                      </select>
+                      </div>
+                      <div class="col-lg-2 mar-t-b-right">
+                          <select (change)="toptionlistallid1()" id="expiry" class="mb-2 nice-select wide wide1 form-select">
+                            <option value="{{mQ}}" *ngFor="let mQ of toptionexpiry">{{mQ}}</option>
+                          </select>
+                          </div>
+                          <div class="col-lg-2 mar-t-b-right">
+                            <input type="text" id="txtActive" class="form-control mb-2" placeholder="Search Option List" >
+                            </div>
+                      </div>
+              
+          </div>
+          <div class="row g-0">
+                        <div class="col-lg-6" style="padding-right: 10px;">
+                          <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end nify-row2 mobileview"><h3>CE</h3></div>
+
+                          <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end desktopview"><h3>CE</h3></div>
+                          
+                          <table class="dataTable" id="DataTables_Table_0">
+                            <thead class="desktopview">
+                              <th class="mobileview" style=" width: 110px;">Product</th>
+                              <th style="width: 17px;">Strike</th>
+                              <th class="mobileview" style="width: 35px;">Point</th>
+                              <th class="desktopview" style="width: 35px;">Point</th>
+                              <th>High</th>
+                              <th>Low</th>
+                              <th>LTP</th>
+                              <th>Action</th>
+                            </thead>
+                            <thead class="nify-row7 mobileview">
+                              <th class="mobileview" style=" width: 110px;">Product</th>
+                              <th style="width: 17px;">Strike</th>
+                              <th class="mobileview" style="width: 35px;">Point</th>
+                              <th class="desktopview" style="width: 35px;">Point</th>
+                              <th>High</th>
+                              <th>Low</th>
+                              <th>LTP</th>
+                              <th>Action</th>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let mQ1 of toptionlistCEU" class="Allwallpaper">
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;" class="white mobileview">{{mQ1.identifier}}<br>{{mQ1.product}}</td>
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.strikePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1 white"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1 white"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.lastTradePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.lastTradePrice}}</td>
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;">
+                                  <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getsetdatatoptionlistCEU(mQ1.symbolIdentifierId)">
+                                    <span><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg></span>
+                                  </button>
+                                </td>
+
+                                <td *ngIf="mQ1.product!='ATM'" class="mobileview">{{mQ1.identifier}}<br>{{mQ1.product}}</td>
+                                <td *ngIf="mQ1.product!='ATM'">{{mQ1.strikePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="text-danger"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="text-success"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" ><span class="text_value1 red">{{mQ1.lastTradePrice}}</span></td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" ><span class="text_value green">{{mQ1.lastTradePrice}}</span></td>
+                                <td *ngIf="mQ1.product!='ATM'" >
+                                  <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getsetdatatoptionlistCEU(mQ1.symbolIdentifierId)">
+                                    <span><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg></span>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+                      </div>
+                    <div class="col-lg-6 padd-top-30" style="padding-left: 10px;">
+
+                      <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end nify-row4 mobileview"><h3>PE</h3></div>
+
+                          <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end desktopview"><h3>PE</h3></div>
+                          
+                          <table class="dataTable" id="DataTables_Table_1">
+                            <thead class="nify-row6 mobileview">
+                              <th class="mobileview" style=" width: 110px;">Product</th>
+                              <th style="width: 17px;">Strike</th>
+                              <th class="mobileview" style="width: 35px;">Point</th>
+                              <th class="desktopview" style="width: 35px;">Point</th>
+                              <th>High</th>
+                              <th>Low</th>
+                              <th>LTP</th>
+                              <th>Action</th>
+                            </thead>
+                            <thead class="desktopview">
+                              <th class="mobileview" style=" width: 110px;">Product</th>
+                              <th style="width: 17px;">Strike</th>
+                              <th class="mobileview" style="width: 35px;">Point</th>
+                              <th class="desktopview" style="width: 35px;">Point</th>
+                              <th>High</th>
+                              <th>Low</th>
+                              <th>LTP</th>
+                              <th>Action</th>
+                            </thead>
+                            <tbody>
+                              <tr *ngFor="let mQ1 of optionlistPE" class="Allwallpaper">
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;" class="white mobileview">{{mQ1.identifier}}<br>{{mQ1.product}}</td>
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.strikePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1 white"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1 white"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.lastTradePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product=='ATM'" style="background: #369fd5;" class="white">{{mQ1.lastTradePrice}}</td>
+                                <td *ngIf="mQ1.product=='ATM'" style="background: #369fd5;">
+                                  <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getsetdataoptionlistPEList(mQ1.symbolIdentifierId)">
+                                    <span><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg></span>
+                                  </button>
+                                </td>
+
+                                <td *ngIf="mQ1.product!='ATM'" class="mobileview">{{mQ1.identifier}}<br>{{mQ1.product}}</td>
+                                <td *ngIf="mQ1.product!='ATM'">{{mQ1.strikePrice}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="text-danger"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="text-success"><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1 "><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg> {{mQ1.priceChangePercentage}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'" class="">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage<0 && mQ1.product!='ATM'"><span class="text_value1 red">{{mQ1.lastTradePrice}}</span></td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="">{{mQ1.high}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'" class="">{{mQ1.low}}</td>
+                                <td *ngIf="mQ1.priceChangePercentage>=0 && mQ1.product!='ATM'"><span class="text_value green">{{mQ1.lastTradePrice}}</span></td>
+                                <td *ngIf="mQ1.product!='ATM'" >
+                                  <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal1" (click)="getsetdataoptionlistPEList(mQ1.symbolIdentifierId)">
+                                    <span><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path _ngcontent-serverApp-c54="" d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg><svg _ngcontent-serverApp-c54="" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path _ngcontent-serverApp-c54="" d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg></span>
+                                  </button>
+                                </td>
+                              </tr>
+                            </tbody>
+                          </table>
+
+                  </div>
+                  </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true" >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header padding-full-15">
+              <h5 class="modal-title" id="exampleModalLabelDefault1" ></h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngIf="getdatawatchlist">
+              <form [formGroup]="detdata">
+                <div class="row">
+                  <div class="mb-2">
+                    <label class="form-check w-100 mb-0">
+                      
+                      <div class="row">
+                          <div class="col-10 col-sm-10 col-xl-10">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                          </div>
+                          <div class="col-2 col-sm-2 col-xl-2">
+                            <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span></p>
+                          </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-10 col-sm-10 col-xl-10">
+                          <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+                          
+                        </div>
+                        <div class="col-2 col-sm-2 col-xl-2">
+                          <p class="mb-3 text-alternate" *ngIf="getdatawatchlist.priceChangePercentage >= 0"><span class="text-success">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                          <p class="mb-3 text-alternate" *ngIf="getdatawatchlist.priceChangePercentage < 0"><span class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                        </div>
+                    </div>
+                    </label>
+                  </div>
+                    <div class="col-lg-12 center">
+                        
+                        <button type="button" class="btn btn-success btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal2" (click)="Quantitypricetotalbuy()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                            <span>Buy</span><br>
+                            <span>{{getdatawatchlist.buyPrice}}</span>
+                        </button>
+                        <button type="button" class="btn btn-danger btn-icon btn-icon-start ms-1 h-auto" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal5" (click)="Quantitypricetotalsell()">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                            <span>Sell</span><br>
+                            <span>{{getdatawatchlist.sellPrice}}</span>
+                        </button>
+                        
+                    </div>
+                    </div>
+                    <div class="row o-h-l-p" >
+                    <div class="col-lg-3 col-3"><span>Open</span></div>
+                    <div class="col-lg-3 col-3"><span>High</span></div>
+                    <div class="col-lg-3 col-3"><span>Low</span></div>
+                    <div class="col-lg-3 col-3"><span>Prev.Close</span></div>
+                    <div class="col-lg-3 col-3"><span>{{getdatawatchlist.openPrice}}</span></div>
+                    <div class="col-lg-3 col-3"><span>{{getdatawatchlist.high}}</span></div>
+                    <div class="col-lg-3 col-3"><span>{{getdatawatchlist.low}}</span></div>
+                    <div class="col-lg-3 col-3"><span>{{getdatawatchlist.closePrice}}</span></div>
+                    </div>
+                    <div class="row background" >
+                        <div class="col-lg-6 col-6"><span>Volume</span></div>
+                        <div class="col-lg-6 col-6 text-right"><span>{{getdatawatchlist.totalQtyTraded}}</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6 col-6"><span>Avg.Trade Price</span></div>
+                        <div class="col-lg-6 col-6 text-right"><span>{{getdatawatchlist.averageTradedPrice}}</span></div>
+                    </div>
+                    <div class="row background" >
+                        <div class="col-lg-6 col-6"><span>Last Traded Price</span></div>
+                        <div class="col-lg-6 col-6 text-right"><span>{{getdatawatchlist.lastTradePrice}}</span></div>
+                    </div>
+                </form>
+            </div>
+        
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header padding-full-15">
+              <h4 class="modal-title dark-red-w" id="exampleModalLabelDefault">SELL ORDER</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="detdata2">
+                <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div >
+                                <div class="mb-2">
+                                  <label class="form-check w-100 mb-0">
+                                    
+                                    <div class="row" *ngIf="getdatawatchlist">
+                                      <div class="col-10 col-sm-10 col-xl-10">
+                                        <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                                      </div>
+                                      <div class="col-2 col-sm-2 col-xl-2">
+                                        <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.lastTradePrice}}</span></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" *ngIf="getdatawatchlist">
+                                    <div class="col-10 col-sm-10 col-xl-10">
+                                      <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+                                      
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-xl-2">
+                                      <p class="mb-3 text-alternate"><span class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                                    </div>
+                                </div>
+                                  </label>
+                                </div>
+                                
+                                <div class="row" *ngIf="getdatawatchlist">
+                                  <div class="col-lg-6 col-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label>Quantity <span class="red">*</span></label>
+                            
+                            <input class="form-control text-border Quantity" formControlName="Quantity"
+                              placeholder="Quantity" name="Quantity" required  (keyup)="Quantitypricetotalsell()" type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" max="999999" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 col-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label>Price <span class="red">*</span></label>
+                                      <input class="form-control Price text-border Price" value="{{getdatawatchlist.sellPrice}}" placeholder="Price" name="Price"  disabled/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row padding-bag-10">
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <p>Stop-loss</p>
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <input type="hidden" class="customSwitchFilleddata" formControlName="customSwitchFilleddata"
+                                      name="customSwitchFilleddata" />
+                                    <div class="form-check form-switch float-right">
+                                      <input type="checkbox" class="form-check-input" id="customSwitchFilled4"
+                                        formControlName="customSwitchFilled"  />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="SwitchFilled padding-b-15">
+                                  <div class="">
+                                    <div class="row">
+                                      <div class="col-lg-3">
+                                        <div class="mb-3 filled tooltip-end-top">
+                                          <label class="padding-top">Est. Stock Price: </label>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="mb-3 filled tooltip-end-top">
+          
+                                          <input class="form-control text-border" formControlName="EstStockPrice1" placeholder="0"
+                                            name="EstStockPrice1"  type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                                        </div>
+                                      </div>
+                                    </div>
+          
+                                  </div>
+                                </div>
+                                <div class="row padding-bag-10">
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <p>Take-profit</p>
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <input type="hidden" class="customSwitchFilleddata1" formControlName="customSwitchFilleddata1"
+                                      name="customSwitchFilleddata1" />
+                                    <div class="form-check form-switch float-right">
+                                      <input type="checkbox" class="form-check-input" id="customSwitchFilled5"
+                                        formControlName="customSwitchFilled2" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="SwitchFilled1">
+                                  <div class="">
+                                    <div class="row">
+                                      <div class="col-lg-3">
+                                        <div class="mb-3 filled tooltip-end-top">
+                                          <label class="padding-top">Est. Stock Price: </label>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="mb-3 filled tooltip-end-top">
+          
+                                          <input class="form-control text-border" formControlName="EstStockPrice2" placeholder="0"
+                                            name="EstStockPrice2"  type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                                        </div>
+                                      </div>
+                                    </div>
+          
+                                  </div>
+                                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Product Type <span class="red">*</span></p>
+                  </div>
+                  
+                  <div class="col-9 col-sm-9 col-xl-9 center" >
+                    <select class="nice-select wide wide1 form-select" formControlName="ProductType1">
+                      <!-- <option value="" selected>Select Product Type</option>  -->
+                      <option value="1" selected>CNC</option>
+                      <option value="2">MIS</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Broker <span class="red">*</span></p>
+                  </div>
+                  
+                  <div class="col-9 col-sm-9 col-xl-9 center" >
+                    <select class="nice-select wide wide1 form-select" formControlName="customerBrokertype" >
+                      <option value="" selected>Select Broker</option>
+                      <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">{{mQ1.brokerName}}</option>
+                    </select>
+                    <div *ngIf="isSubmitted && fsell['customerBrokertype'].errors">
+                      <span *ngIf="fsell['customerBrokertype'].errors['required']" class="text-danger">Broker Name is
+                        required.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Total Price</p>
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3 center" >
+                    <p class="totalprice" >{{quantitydatasell}}</p>
+                  </div>
+                </div>
+              </div>
+                    <!-- Responsive Vertical End -->
+              </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-danger Place-Order" (click)="addPostCreateOrdershell(0)">Place Order</button>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header padding-full-15">
+              <h4 class="modal-title dark-green-w" id="exampleModalLabelDefault">BUY ORDER</h4>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form [formGroup]="detdata1">
+                <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div >
+                                <div class="mb-2">
+                                  <label class="form-check w-100 mb-0">
+                                    
+                                    <div class="row" *ngIf="getdatawatchlist">
+                                      <div class="col-10 col-sm-10 col-xl-10">
+                                        <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                                      </div>
+                                      <div class="col-2 col-sm-2 col-xl-2">
+                                        <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.lastTradePrice}}</span></p>
+                                      </div>
+                                  </div>
+                                  <div class="row" *ngIf="getdatawatchlist">
+                                    <div class="col-10 col-sm-10 col-xl-10">
+                                      <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+                                      
+                                    </div>
+                                    <div class="col-2 col-sm-2 col-xl-2">
+                                      <p class="mb-3 text-alternate"><span class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                                    </div>
+                                </div>
+                                  </label>
+                                </div>
+                                
+                                <div class="row" *ngIf="getdatawatchlist">
+                                  <div class="col-lg-6 col-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label>Quantity <span class="red">*</span></label>
+                            
+                            <input class="form-control text-border Quantity" formControlName="Quantity"
+                              placeholder="Quantity" name="Quantity" required  (keyup)="Quantitypricetotalbuy()" type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" max="999999" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6" />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6 col-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label>Price <span class="red">*</span></label>
+                                      <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" id="buyPricevalue" placeholder="Price" name="Price" disabled/>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="row padding-bag-10">
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <p>Stop-loss</p>
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <input type="hidden" class="customSwitchFilleddatabuy" formControlName="customSwitchFilleddata"
+                                      name="customSwitchFilleddata" />
+                                    <div class="form-check form-switch float-right">
+                                      <input type="checkbox" class="form-check-input" id="customSwitchFilledbuy"
+                                        formControlName="customSwitchFilled" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="SwitchFilledbuy padding-b-15">
+                                  <div class="">
+                                    <div class="row">
+                                      <div class="col-lg-3">
+                                        <div class="mb-3 filled tooltip-end-top">
+                                          <label class="padding-top">Est. Stock Price: </label>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="mb-3 filled tooltip-end-top">
+          
+                                          <input class="form-control text-border" formControlName="EstStockPrice1" placeholder="0"
+                                            name="EstStockPrice1"  type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                                        </div>
+                                      </div>
+                                    </div>
+          
+                                  </div>
+                                </div>
+                                <div class="row padding-bag-10">
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <p>Take-profit</p>
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+          
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                  </div>
+                                  <div class="col-3 col-sm-3 col-xl-3">
+                                    <input type="hidden" class="customSwitchFilleddatabuy1" formControlName="customSwitchFilleddata1"
+                                      name="customSwitchFilleddata1" />
+                                    <div class="form-check form-switch float-right">
+                                      <input type="checkbox" class="form-check-input" id="customSwitchFilledbuy1"
+                                        formControlName="customSwitchFilled2" />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="SwitchFilledbuy1">
+                                  <div class="">
+                                    <div class="row">
+                                      <div class="col-lg-3">
+                                        <div class="mb-3 filled tooltip-end-top">
+                                          <label class="padding-top">Est. Stock Price: </label>
+                                        </div>
+                                      </div>
+                                      <div class="col-lg-9">
+                                        <div class="mb-3 filled tooltip-end-top">
+          
+                                          <input class="form-control text-border" formControlName="EstStockPrice2" placeholder="0"
+                                            name="EstStockPrice2"  type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57"/>
+                                        </div>
+                                      </div>
+                                    </div>
+          
+                                  </div>
+                                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Product Type <span class="red">*</span></p>
+                  </div>
+                  
+                  <div class="col-9 col-sm-9 col-xl-9 center" >
+                    <select class="nice-select wide wide1 form-select" formControlName="ProductType1">
+                      <!-- <option value="" selected>Select Product Type</option>  -->
+                      <option value="1" >CNC</option>
+                      <option value="2">MIS</option>
+                    </select>
+                    
+                  </div>
+                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Broker <span class="red">*</span></p>
+                  </div>
+                  
+                  <div class="col-9 col-sm-9 col-xl-9 center" >
+                    <select class="nice-select wide wide1 form-select" formControlName="customerBrokertype" >
+                      <option value="" selected>Select Broker</option>
+                      <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">{{mQ1.brokerName}}</option>
+                    </select>
+                    <div *ngIf="isSubmitted && fbuy['customerBrokertype'].errors">
+                      <span *ngIf="fbuy['customerBrokertype'].errors['required']" class="text-danger">Broker Name is
+                        required.</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      <p>Total Price</p>
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3">
+                      
+                  </div>
+                  <div class="col-3 col-sm-3 col-xl-3 center" >
+                    <p class="totalprice" >{{quantitydatabuy}}</p>
+                  </div>
+                </div>
+              </div>
+                    <!-- Responsive Vertical End -->
+              </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-success Place-Order" (click)="addPostCreateOrderbuy(0)">Buy Order</button>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</main>

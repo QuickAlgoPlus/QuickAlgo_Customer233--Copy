@@ -1,0 +1,448 @@
+<app-header></app-header>
+<script src="https://cdn.jsdelivr.net/clipboard.js/1.5.12/clipboard.min.js"></script>
+
+<style>
+  .card-body {
+    padding: 2rem 2rem;
+  }
+
+  .btn-lg,
+  .btn-group-lg>.btn {
+    padding: 10px 20px;
+  }
+   .green {
+    color: #00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important
+  }
+  .green1 {
+    color:#00FF7F!important;
+  }
+
+  .red1 {
+    color: #FF0000!important;
+  }
+  .nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+}
+.mt-4 {
+    margin-top: 7.5rem !important;
+}
+
+  @media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+.h-over {
+    max-height: auto;
+  }
+}
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 7.9rem !important;
+}
+.h-over {
+    max-height: 540px;
+    overflow: auto;
+  }
+  }
+  .text-right {
+    text-align: right;
+  }
+  .btn-outline-success span:hover{
+    color:white
+  }
+</style>
+
+
+
+
+<main>
+
+
+  <div class="container">
+    <div class="mb-5">
+      <div class="row g-2 nify-row d-flex mobileview">
+        <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+          <div class="card hover-scale-up cursor-pointer">
+            <div class="h-100 row g-0 card-body align-items-center py-3">
+             
+              <div class="col">
+                <div class="row gx-2 d-flex align-content-center">
+                  <div class="col-4 col-md-5 ">
+                    <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                    
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                      <span class="text-medium">{{symbol.priceChange}}</span>
+                    </div>
+                    <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                      
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                      <span class="text-medium">{{symbol.priceChange}}</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                    <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                  </div>
+                  <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                    <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row g-2 desktopview">
+        <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+          <div class="card hover-scale-up cursor-pointer">
+            <div class="h-100 row g-0 card-body align-items-center py-3">
+             
+              <div class="col">
+                <div class="row gx-2 d-flex align-content-center">
+                  <div class="col-4 col-md-5 ">
+                    <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                    
+                  </div>
+                  <div class="col-4 col-md-2">
+                    <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                      <span class="text-medium">{{symbol.priceChange}}</span>
+                    </div>
+                    <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                      
+                      <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                      <span class="text-medium">{{symbol.priceChange}}</span>
+                    </div>
+                  </div>
+                  <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                    <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                  </div>
+                  <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                    <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Title and Top Buttons Start -->
+    <div class="page-title-container mt-4">
+      <div class="row">
+        <!-- Title Start -->
+        <div class="col-lg-3 mb-3 mb-md-0 me-auto">
+          <div class="w-auto sw-md-30">
+            <h1 class="mb-0 pb-0 display-4" id="title">Broker List</h1>
+          </div>
+        </div>
+        
+        <!-- Title End -->
+        <div class="col-lg-6">
+          <div class="card" style="margin-top: 10px;">
+            <div class="card-body" style="padding: 5px;text-align: center;">
+              <div class="text-primary" style="color:#23accb!important; font-weight:600;" > Our software will not do any activity if you didn't link your demat account with our software.</div>
+            </div>
+          </div>
+        </div>
+        <!-- Top Buttons Start -->
+        <div class="col-lg-3">
+          <button type="button" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1 mt-2" style="float: right;" data-bs-dismiss="modal"
+            aria-label="Close" data-bs-toggle="modal" data-bs-target="#addmodels" (click)="resetForm()">
+            <span style="color:#000000!important; font-weight:600;" >Add New</span>
+          </button>
+        </div>
+      </div>
+      <div class="row mb-3">
+        <div class="col-lg-12 mar-t-b-right">
+          <div class="row">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="txtActive"
+                 placeholder="Search Broker List"  id="myInput"/>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Title and Top Buttons End -->
+
+    <!-- Controls Start -->
+    <div class="row mb-2">
+      <!-- Search Start -->
+    </div>
+    <!-- Controls End -->
+
+    <!-- Order List Start -->
+    <div class="row">
+      <div class="col-12 mb-5">
+        <div class="card mb-2 bg-transparent no-shadow d-none d-md-block">
+          <div class="card-body pt-0 pb-0 sh-3">
+            <div class="row g-0 h-100 align-content-center">
+              <div class="col-md-4 d-flex align-items-center mb-2 mb-md-0 text-muted text-small" Style="color:#000000!important; font-weight:600;">Broker Name</div>
+              <div class="col-md-4 d-flex align-items-center text-muted text-small" Style="color:#000000!important; font-weight:600;">Created Date</div>
+              <div class="col-md-4 d-flex align-items-center text-muted text-small" Style="color:#000000!important; font-weight:600;">Status</div>
+            </div>
+          </div>
+        </div>
+        <div class="h-over">
+          <div class="card mb-2" *ngIf="BrokerConfigList==null|| BrokerConfigList==''">
+            <div class="row g-0 sh-14">
+
+              <div class="col">
+                <div class="card-body pt-0 pb-0 h-100">
+                  <div class="row g-0 h-100 align-content-center">
+                    <h3 class="text-center">No Records found</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-2 Allwallpaper" *ngFor="let mQ of BrokerConfigList">
+            <div class="card-body sh-21 sh-md-8">
+              <div class="row g-0 h-100 align-content-center">
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center mb-2 mb-md-0 order-4 order-md-3">
+                  <div class="text-muted text-small d-md-none" Style="color:#000000!important; font-weight:600;">Broker Name</div>
+                  <div class="text-alternate">
+                    <a class="text-truncate h-100 d-flex align-items-center" Style="color:#000000!important; font-weight:600;">{{mQ.brokerName}}</a>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 d-flex flex-column justify-content-center mb-2 mb-md-0 order-4 order-md-3">
+                  <div class="text-muted text-small d-md-none" Style="color:#000000!important; font-weight:600;">Created Date</div>
+                  <div class="text-alternate">
+                    <a class="text-truncate h-100 d-flex align-items-center" Style="color:#000000!important; font-weight:600;">{{mQ.createdDate | date: "medium" }}</a>
+                  </div>
+                </div>
+                <div
+                  class="col-4 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5">
+                  <div class="text-muted text-small d-md-none" Style="color:#000000!important; font-weight:600;">Status</div>
+                  <div class="text-alternate">
+                    <a class="text-truncate h-100 d-flex align-items-center green1" *ngIf="mQ.status==true" Style="color:#48D1CC!important; font-weight:600;">Active</a>
+                    <a class="text-truncate h-100 d-flex align-items-center red1" *ngIf="mQ.status==false" Style="color:#C71585!important; font-weight:600;">In Active</a>
+                  </div>
+                </div>
+                <div class="col-4 col-md-1 d-flex justify-content-center mb-2 mb-md-0 order-last order-md-5">
+                  
+                  <button type="button" data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal"
+                    data-bs-target="#addmodels" (click)="editBrokerfunction(mQ.brokerconfigID)"
+                    class="editdata btn btn-sm btn-icon btn-icon-start btn-outline-primary  mar-hig mar-righ">
+                    <span Style="color:#000000!important; font-weight:600;">Edit</span>
+                  </button>
+                  
+                </div>
+                <div class="col-4 col-md-1 d-flex justify-content-center mb-2 mb-md-0 order-last order-md-5" *ngIf="mQ.status==true">
+                  
+                  <button type="button" (click)="PostCustBrokerStatuslist(mQ.brokerID,mQ.brokerconfigID)"
+                    class="editdata btn btn-sm btn-icon btn-icon-start btn-outline-success  mar-hig mar-righ">
+                    <span Style="color:#FF0000!important; font-weight:600;">Deactivate</span>
+                  </button>
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<div class="modal fade" id="addmodels" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault"
+  aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header padding-full-15">
+        <h5 class="modal-title" id="exampleModalLabelDefault">Add Broker</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="cencalmodel()"
+          aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="">
+                    <!-- (ngSubmit)="updateProfile()" -->
+                    <form [formGroup]="brokerform">
+                      <div class="card no-shadow mt-3 ">
+                        <div class="mb-3 form-group tooltip-end-top">
+                          <label>Broker <span class="red">*</span></label>
+                          <select name="cars" (change)="changeBrokerConfig()" [selectedIndex]="0"
+                            class="nice-select wide wide1 form-select" id="cars" formControlName="BrokerID">
+                            <option value="" selected>Select Broker</option>
+                            <option value="{{mQ.brokerID}}" id="{{mQ.apiURL}}" *ngFor="let mQ of BrokerList">
+                              {{mQ.brokerName}}</option>
+                          </select>
+                          <div *ngIf="isSubmitted && f['BrokerID'].errors">
+                            <span *ngIf="f['BrokerID'].errors['required']" class="text-danger">Broker is
+                              required.</span>
+                          </div>
+                        </div>
+                        
+                        <div class="mb-3 form-group tooltip-end-top" >
+                          <label *ngIf="BrokerID == 2 || BrokerID == 3||BrokerID == 1||BrokerID == 5">API Key <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 6">Vendor Id <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 7">User Key <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 8"> APP ID <span class="red">*</span></label>
+                          <input type="password" class="form-control" id="text-value1" formControlName="ApiKey" (change)="ApiKey()"
+                          />
+                          
+                          <div *ngIf="isSubmitted && f['ApiKey'].errors">
+                            <span *ngIf="f['ApiKey'].errors['required']" class="text-danger">Vendor Id is
+                              required.</span>
+                          </div>
+                          <button type="submit" onclick="showtext()" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary text-small position-absolute t-1 e-3" style="margin-top: 17px;">Show</button>
+                        </div>
+                        <div class="mb-3 form-group tooltip-end-top" *ngIf="BrokerID == 2 || BrokerID == 3||BrokerID == 6||BrokerID == 8">
+                          <label *ngIf="BrokerID == 2 || BrokerID == 3">Client Code <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 8">Client ID <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 6">Userid <span class="red">*</span></label>
+                          <input type="text" class="form-control" id="ClientCode" formControlName="ClientCode"
+                             />
+                          <div *ngIf="isSubmitted && f['ClientCode'].errors">
+                            <span *ngIf="f['ClientCode'].errors['required']" class="text-danger">Userid is
+                              required.</span>
+                          </div>
+                         
+                        </div>
+                        <div class="mb-3 form-group tooltip-end-top" *ngIf="BrokerID == 7">
+                          <label *ngIf="BrokerID == 7">App Source <span class="red">*</span></label>
+                          <input type="text" class="form-control" id="AppSource" formControlName="AppSource"
+                             />
+                          <div *ngIf="isSubmitted && f['AppSource'].errors">
+                            <span *ngIf="f['AppSource'].errors['required']" class="text-danger">App Source is
+                              required.</span>
+                          </div>
+                          
+                        </div>
+                        <div class="mb-3 form-group tooltip-end-top" *ngIf="BrokerID == 2||BrokerID == 6">
+                          <label *ngIf="BrokerID == 2 ">Password <span class="red">*</span></label>
+                          <label *ngIf="BrokerID == 6">Password <span class="red">*</span></label>
+                          <input type="text" class="form-control" id="text-value11" formControlName="Password"
+                             />
+                          <div *ngIf="isSubmitted && f['Password'].errors">
+                            <span *ngIf="f['Password'].errors['required']" class="text-danger">Password is
+                              required.</span>
+                          </div>
+                        </div>
+                        <div class="mb-3 form-group tooltip-end-top" *ngIf="BrokerID == 6 ||BrokerID == 7||BrokerID == 8">
+                          <label  *ngIf="BrokerID == 7">User Id <span class="red">*</span></label>
+                          <label  *ngIf="BrokerID == 8">Secret <span class="red">*</span></label>
+                          <label  *ngIf="BrokerID == 6">Vendor Key <span class="red">*</span></label>
+                          <input type="text" class="form-control" id="text-value12" formControlName="ApiToken"
+                            />
+                          <div *ngIf="isSubmitted && f['ApiToken'].errors">
+                            <span *ngIf="f['ApiToken'].errors['required']" class="text-danger">Vendor Key is
+                              required.</span>
+                          </div>
+                        </div>
+                        <!-- <div class="mb-3 form-group tooltip-end-top" *ngIf="BrokerID == 6">
+                          <label>Secrat Key</label>
+                          <input type="text" class="form-control" id="text-value11" formControlName="SecratKey"
+                            placeholder="Secrat Key" />
+                          <div *ngIf="isSubmitted && f['SecratKey'].errors">
+                            <span *ngIf="f['SecratKey'].errors['required']" class="text-danger">Secrat Key is
+                              required.</span>
+                          </div>
+                        </div> -->
+                        
+                        <!-- <div class="mb-3 form-group tooltip-end-top">
+                                <label>Refresh Token</label>
+                                <input type="text" class="form-control" formControlName="RefreshToken" placeholder="Refresh Token" id="RefreshToken" />
+                                <div *ngIf="isSubmitted && f['RefreshToken'].errors">
+                                  <span *ngIf="f['RefreshToken'].errors['required']" class="text-danger">Request Token is
+                                  required.</span>
+                                </div>
+                              </div> -->
+                              <div class="mb-3 form-group tooltip-end-top"  *ngIf="BrokerID == 1 || BrokerID == 2|| BrokerID == 6||BrokerID == 7">
+                                <label *ngIf="BrokerID == 2 || BrokerID == 1">My Secret <span class="red">*</span></label>
+                                <label *ngIf="BrokerID == 6|| BrokerID == 7">Encryption key <span class="red">*</span></label>
+                                <input type="text" class="form-control" formControlName="secratKey"  />
+                                <div *ngIf="isSubmitted && f['secratKey'].errors">
+                                  <span *ngIf="f['secratKey'].errors['required']" class="text-danger">Encryption key is
+                                    required.</span>
+                                </div>
+                              </div>
+                              <div class="mb-3 form-group tooltip-end-top"  *ngIf="BrokerID == 1||BrokerID == 6||BrokerID == 7||BrokerID == 8">
+                                <label *ngIf="BrokerID == 1||BrokerID == 7||BrokerID == 8">Request Token <span class="red">*</span></label>
+                                <label *ngIf="BrokerID == 6">Encryption IV <span class="red">*</span></label>
+                                <input type="text" class="form-control" formControlName="RequestToken"
+                                   />
+                                <div *ngIf="isSubmitted && f['RequestToken'].errors">
+                                  <span *ngIf="f['RequestToken'].errors['required']" class="text-danger">Encryption IV is
+                                    required.</span>
+                                </div>
+                              </div>
+                              <div class="mb-3 filled form-group tooltip-end-top"  *ngIf="BrokerID == 1||BrokerID == 7||BrokerID == 8">
+                                <label *ngIf="BrokerID == 1||BrokerID == 7||BrokerID == 8" >Use This Link in Your Redirect Url <span class="red">*</span></label>
+                                <input type="text" class="form-control" id="copytext" disabled value="https://algoresponcetrading.in/BrokerResponse.html"
+                                   />
+                                   
+                                   <button type="submit" (click)="copyMessage('https://algoresponcetrading.in/BrokerResponse.html')" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary text-small position-absolute t-3 e-3" style="margin-top: 12px;">Copy</button>
+                              </div>
+                              <div class="mb-3 filled form-group tooltip-end-top" *ngIf="BrokerID == 2||BrokerID == 6">
+                                <label>TOTP <span class="red">*</span></label>
+                                <input type="text" class="form-control" formControlName="TOTP" placeholder="TOTP" />
+                                <div *ngIf="isSubmitted && f['TOTP'].errors">
+                                  <span *ngIf="f['TOTP'].errors['required']" class="text-danger">TOTP is
+                                    required.</span>
+                                </div>
+                                
+                                <button type="submit" *ngIf="BrokerID == 6" (click)="SaveTOTP()" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary text-small position-absolute t-3 e-3" style="margin-top: 12px;">Generate</button>
+                              </div>
+                              <!-- <div class="mb-3 form-group tooltip-end-top"  *ngIf="BrokerID == 2">
+                                
+                                <input type="text" class="form-control" formControlName="TOTP" placeholder="TOTP" />
+                                <div *ngIf="isSubmitted && f['TOTP'].errors">
+                                  <span *ngIf="f['TOTP'].errors['required']" class="text-danger">TOTP is
+                                    required.</span>
+                                </div>
+                              </div> -->
+                        
+                        <div class="row">
+                          <div class="col-lg-4 col-6 mb-2">
+                            <button type="submit" (click)="SaveBroken()" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ">Save
+                              Request</button>
+                          </div>
+                          <div class="col-lg-4 text-center col-6">
+                            <a href="" target="_blank" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary " id="Devloper">Developer</a>
+                          </div>
+                          <div class="col-lg-4 col-6">
+                            <a href="" target="_blank" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary " id="text-value">Test
+                              Connection</a>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- <script>
+    $('#cars').change(function(){ 
+      $('#text-value').attr('href',$('#cars').children(":selected").attr("id")+""+$('#text-value1').val())
+      $('#Devloper').attr('href',$('#cars').children(":selected").attr("id"))
+    })
+   </script> -->
+<!-- Layout Footer Start -->

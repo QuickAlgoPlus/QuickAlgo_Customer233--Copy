@@ -1,0 +1,301 @@
+<app-header></app-header>
+<style>
+  .card-body {
+    padding: 2rem 2rem;
+}
+ .green {
+    color:#00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important;
+  }
+  .nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+}
+.mt-4 {
+    margin-top: 7.9rem !important;
+}
+@media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+}
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 7.5rem !important;
+}
+  }
+  .text-right {
+    text-align: right;
+  }
+  .font-25{
+    font-size: 25px;
+  }
+  .mar-b-0{
+    margin-bottom:0px
+  }
+  .btn-span{
+    margin: 5px;margin-top: -7px;margin-bottom: 15px;
+  }
+</style>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- Title Start -->
+            <div class="">
+              <div class="row g-2 nify-row d-flex mobileview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2 desktopview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-2 mt-4">
+              <section class="scroll-section" id="title">
+                <div class="page-title-container">
+                  <h1 class="mb-0 pb-0 display-4">Profile</h1>
+                  
+                </div>
+              </section>
+              <div class="col-lg-1">
+              <img src="assets/img/profile/user.png">
+              </div>
+              <div class="col-lg-11">
+                <div class="row">
+                  <div class="col-lg-12">
+                  <p class="font-25 mar-b-0">{{Name}}</p>
+                  <p class="name">{{UserName}}</p>
+                  <!-- <p>M-F : 09:00 AM - 06:30 PM</p> -->
+                </div>
+                </div>
+              
+              </div><!-- Title End -->
+              </div>
+            <div class="row g-2 mt-3">
+              <div class="card card-body no-shadow border mt-3 ">
+                <div class="row">
+              <div class="col-lg-2">
+                <div class="row">
+                  <div class="col-lg-6">
+                  <p>Mobile : </p>
+                 
+                </div>
+                <div class="col-lg-6">
+                  <p>{{Mobile}}</p>
+                  <!-- <p>M-F : 09:00 AM - 06:30 PM</p> -->
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6">
+                  <p>Email : </p>
+                 
+                </div>
+                <div class="col-lg-6">
+                  <p>{{Email}}</p>
+                  <!-- <p>M-F : 09:00 AM - 06:30 PM</p> -->
+                </div>
+                </div>
+                <!-- <div class="row">
+                  <div class="col-lg-2">
+                  <p>Pan Card : </p>
+                 
+                </div>
+                <div class="col-lg-10">
+                  <p></p>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                  <p>DP IDs : </p>
+                 
+                </div>
+                <div class="col-lg-10">
+                  <p></p>
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                  <p>DP BO ID : </p>
+                 
+                </div>
+                <div class="col-lg-10">
+                  <p></p>
+           
+                </div>
+                </div> -->
+              </div>
+              <div class="col-lg-10">
+                <div class="row">
+                  <div class="col-lg-2">
+                  <p>Segments : </p>
+                 
+                </div>
+                <div class="col-lg-10 mar-top-10">
+                  <div *ngIf="GetGroupbycustomerListcategories!=null"><span *ngFor="let mQ of GetGroupbycustomerListcategories" class="btn btn-sm btn-outline-primary btn-span" >{{mQ}}</span></div>
+                  <!-- <p>M-F : 09:00 AM - 06:30 PM</p> -->
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                  <p>Stratergies : </p>
+                 
+                </div>
+                <div class="col-lg-10 mar-top-10">
+                  <div *ngIf="GetGroupbycustomerListstratergies!=null"><span *ngFor="let mQ of GetGroupbycustomerListstratergies" class="btn btn-sm btn-outline-primary btn-span">{{mQ}}</span></div>
+               
+                </div>
+                </div>
+                
+                
+                <!-- <div class="row">
+                  <div class="col-lg-2">
+                  <p>Bank A/c No : </p>
+                 
+                </div>
+                <div class="col-lg-10">
+                  <p></p>
+    
+                </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-2">
+                  <p>Bank Name : </p>
+                 
+                </div>
+                <div class="col-lg-10">
+                  <p></p>
+      
+                </div>
+                </div> -->
+              </div>
+                <div class="col-lg-1">
+                <p>Products : </p>
+               
+              </div>
+              <div class="col-lg-11 mar-top-10">
+                <div *ngIf="GetGroupbycustomerListstocks!=null"><span *ngFor="let mQ of GetGroupbycustomerListstocks" class="btn btn-sm btn-outline-primary btn-span">{{mQ}}</span></div>
+                <!-- <p>M-F : 09:00 AM - 06:30 PM</p> -->
+              </div>
+              </div>
+            </div>
+            </div>
+            <div class="row g-2 mt-3 mb-4">
+              <p>Customer Support:</p>
+              <div class="card card-body no-shadow border">
+              <div class="row">
+                <div class="col-lg-2">
+                <p>Support Email ID : </p>
+              </div>
+              <div class="col-lg-10">
+                <p>{{Companydetails.supportEmailID}}</p>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2">
+                <p>Sell Email ID : </p>
+              </div>
+              <div class="col-lg-10">
+                <p>{{Companydetails.sellEmailID}}</p>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2">
+                <p>Centralized Support: </p>
+               
+              </div>
+              <div class="col-lg-10">
+                <p>{{Companydetails.centralizedSupportNumber}}</p>
+                <p>{{Companydetails.centralizedSupportTimeStart}}</p>
+              </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-2">
+                <p>Centralized Dealing : </p>
+                
+              </div>
+              <div class="col-lg-10">
+                <p>{{Companydetails.centralizedDealingNumber}}</p>
+                <p>{{Companydetails.centralizedDealingTimeStart}}</p>
+              </div>
+              </div>
+            </div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </main>
+
+    <!-- Layout Footer Start -->
+    

@@ -1,0 +1,231 @@
+<app-header></app-header>
+<main>
+    <div class="container">
+      <div class="mb-5">
+        <div class="row g-2 nify-row d-flex mobileview">
+          <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+            <div class="card hover-scale-up cursor-pointer">
+              <div class="h-100 row g-0 card-body align-items-center py-3">
+               
+                <div class="col">
+                  <div class="row gx-2 d-flex align-content-center">
+                    <div class="col-4 col-md-5 ">
+                      <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                      
+                    </div>
+                    <div class="col-4 col-md-2">
+                      <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                        <span class="text-medium">{{symbol.priceChange}}</span>
+                      </div>
+                      <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                        <span class="text-medium">{{symbol.priceChange}}</span>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                      <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                    </div>
+                    <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                      <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-2 desktopview">
+          <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+            <div class="card hover-scale-up cursor-pointer">
+              <div class="h-100 row g-0 card-body align-items-center py-3">
+               
+                <div class="col">
+                  <div class="row gx-2 d-flex align-content-center">
+                    <div class="col-4 col-md-5 ">
+                      <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                      
+                    </div>
+                    <div class="col-4 col-md-2">
+                      <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                        <span class="text-medium">{{symbol.priceChange}}</span>
+                      </div>
+                      <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                        <span class="text-medium">{{symbol.priceChange}}</span>
+                      </div>
+                    </div>
+                    <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                      <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                    </div>
+                    <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                      <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Title and Top Buttons Start -->
+      <div class="page-title-container mt-4">
+        <div class="row">
+          <!-- Title Start -->
+          <div class="col-lg-2 mb-3 mb-md-0 me-auto">
+            <div class="w-auto sw-md-30">
+              <h1 class="mb-0 pb-0 display-4" id="title">Signals List</h1>
+            </div>
+          </div>
+          <div class="col-lg-10">
+            
+          </div>
+          <!-- Title End -->
+
+          <!-- Top Buttons Start -->
+          <div class="col-3 d-flex align-items-end justify-content-end">
+            <!-- Check Button Start -->
+            <div class="btn-group ms-1 check-all-container">
+              <!-- <div class="btn btn-outline-primary btn-custom-control p-0 ps-3 pe-2" data-target="#checkboxTable">
+                <span class="form-check float-end">
+                  <input type="checkbox" class="form-check-input" id="checkAll" />
+                </span>
+              </div>
+              <button
+                type="button"
+                class="btn btn-outline-primary dropdown-toggle dropdown-toggle-split"
+                data-bs-offset="0,3"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              ></button> -->
+              <div class="dropdown-menu dropdown-menu-end">
+                <a class="dropdown-item" href="#">
+                  <span class="align-middle d-inline-block">Status</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="align-middle d-inline-block">Move</span>
+                </a>
+                <a class="dropdown-item" href="#">
+                  <span class="align-middle d-inline-block">Delete</span>
+                </a>
+              </div>
+            </div>
+            <!-- Check Button End -->
+          </div>
+          <!-- Top Buttons End -->
+        </div>
+      </div>
+      <!-- Title and Top Buttons End -->
+
+      <!-- Controls Start -->
+      <div class="row mb-2">
+        <!-- Search Start -->
+      </div>
+      <!-- Controls End -->
+      <div class="row mb-3">
+        <div class="col-lg-12 mar-t-b-right">
+          <div class="row">
+            <div class="col-lg-2">
+              <input type="text" class="form-control" id="txtActive"
+                 placeholder="Search Signals List"/>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      <!-- Order List Start -->
+      <div class="row">
+        <div class="col-12 mb-5">
+          <div class="card mb-2 bg-transparent no-shadow d-none d-md-block">
+            <div class="card-body pt-0 pb-0 sh-3">
+              <div class="row g-0 h-100 align-content-center">
+                <!-- <div class="col-6 col-md-1 d-flex align-items-center mb-2 mb-md-0 text-muted text-small">ID</div> -->
+                <div class="col-6 col-md-2 d-flex align-items-center text-muted text-small" style="color:#000000!important; font-weight:600;">Product</div>
+                <div class="col-6 col-md-2 align-items-center text-center text-muted text-small" style="color:#000000!important; font-weight:600;">Date</div>
+                <div class="col-6 col-md-2 align-items-center text-center text-muted text-small" style="color:#000000!important; font-weight:600;">StatergyName</div>
+                <div class="col-6 col-md-2 text-center align-items-center text-muted text-small" style="color:#000000!important; font-weight:600;">Reason</div>
+                <div class="col-6 col-md-2 text-center align-items-center text-muted text-small" style="color:#000000!important; font-weight:600;">Order Type</div>
+                <div class="col-6 col-md-2 text-center align-items-center text-muted text-small" style="color:#000000!important; font-weight:600;">Trigger</div>
+                
+              </div>
+            </div>
+          </div>
+         <div class="h-over">
+            <div class="card mb-2" *ngIf="SignalsList==null || SignalsList==''">
+              <div class="row g-0 sh-14">
+                
+                <div class="col">
+                  <div class="card-body pt-0 pb-0 h-100">
+                    <div class="row g-0 h-100 align-content-center" >
+                      <h3 class="text-center">No Records found</h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card mb-2 Allwallpaper" *ngFor="let mQ of SignalsList">
+              <div class="card-body pt-0 pb-0 sh-md-8">
+                <div class="row g-0 h-100 align-content-center">
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-3 order-md-2 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Product</div>
+                    <div class="text-alternate" style="color:#000000!important; font-weight:600;">{{mQ.product}}</div>
+                  </div>
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Date</div>
+                    <div class="text-alternate" style="color:#000000!important; font-weight:600;">{{mQ.createdDate | date:'yyyy-MM-dd HH:mm:ss'}}</div>
+                  </div>
+                  
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Statergy Name</div>
+                    <div class="text-alternate" style="color:#000000!important; font-weight:600;">{{mQ.statergyName}}</div>
+                  </div>
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Reason</div>
+                    <div class="text-alternate" style="color:#48D1CC!important; font-weight:600;">{{mQ.reason}}</div>
+                  </div>
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-5 order-md-4 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Order Type</div>
+                    <div class="text-alternate green" *ngIf="mQ.orderType==1" style="color:#00FF7F!important; font-weight:600;">Buy</div>
+                    <div class="text-alternate red" *ngIf="mQ.orderType==2" style="color:#FF0000!important; font-weight:600;">Sell</div>
+                  </div>
+                  <div class="col-6 col-md-2 d-flex flex-column justify-content-center mb-2 mb-md-0 order-last order-md-5 text-center">
+                    <div class="text-muted text-small d-md-none" style="color:#000000!important; font-weight:600;">Trigger</div>
+                    <div class="text-alternate" style="color:#000000!important; font-weight:600;">
+                      {{mQ.trigger}}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Order List End -->
+
+      <!-- Pagination Start -->
+      <!-- <div class="d-flex justify-content-center">
+        <nav>
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link shadow" href="#" tabindex="-1" aria-disabled="true">
+                <i data-acorn-icon="chevron-left"></i>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link shadow" href="#">1</a></li>
+            <li class="page-item"><a class="page-link shadow" href="#">2</a></li>
+            <li class="page-item"><a class="page-link shadow" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#">
+                <i data-acorn-icon="chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div> -->
+      <!-- Pagination End -->
+    </div>
+  </main>

@@ -1,0 +1,40 @@
+ .green {
+    color:#00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important;
+  }
+  .nify-row{
+    position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+  .mt-4 {
+    margin-top: 7.5rem !important;
+}
+@media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+.h-over {
+  max-height: auto;
+}
+}
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 7.9rem !important;
+}
+.h-over {
+  max-height: 390px;
+  overflow: auto;
+}
+  }
+  .text-right {
+    text-align: right;
+  }

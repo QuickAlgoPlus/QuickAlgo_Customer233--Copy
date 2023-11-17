@@ -1,0 +1,42 @@
+<style>
+  .card-body {
+    padding: 2rem 2rem;
+}
+</style>
+
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <!-- Title Start -->
+            <section class="scroll-section" id="title">
+              <div class="page-title-container">
+                <h1 class="mb-0 pb-0 display-4">Funds</h1>
+                
+              </div>
+            </section>
+            <!-- Title End -->
+            <div class="row g-2">
+              <div class="col-lg-6">
+                <div class="">
+                  <form [formGroup]="Depositform" (ngSubmit)="depositadd()">
+                        <div class="card card-body no-shadow border mt-3 ">
+                            <div>Current Available Fund: </div>
+                            <div class="mb-3 form-group tooltip-end-top">
+                                <input class="form-control" placeholder="" formControlName="Amount" name="price" />
+                            </div>
+                            <button type="submit" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary ms-1 mt-2 col-4">Add Fund</button>
+                        </div>
+                  </form>
+              </div>
+              </div>
+              <div class="col-lg-6"></div>
+            </div>
+        </div>
+      </div>
+      </div>
+    </main>
+
+    <!-- Layout Footer Start -->
+    

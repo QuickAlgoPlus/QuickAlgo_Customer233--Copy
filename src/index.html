@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en" >
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="" id="metacontent"/>
+    <link rel="icon" href="" type="image/png" id="hrefurl"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/font/CS-Interface/style.css" />
+    <!-- Font Tags End -->
+    <!-- Vendor Styles Start -->
+    <link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/vendor/OverlayScrollbars.min.css" />
+
+    <!-- Vendor Styles End -->
+    <!-- Template Base Styles Start -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- Template Base Styles End -->
+<link rel="stylesheet" href="assets/css/dataTables.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <script src="assets/js/base/loader.js"></script>
+    <script src="assets/js/vendor/jquery-3.5.1.min.js"></script>
+    
+    
+    <style>
+      ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+      .fa {
+    margin-right: 5px
+}
+.font-color{
+      font-size: 14px !important;
+    color: white !important;
+    }
+    .col-xl:hover{
+      color: #379fd5;
+    }
+    .text-secondary{
+      color: white!important;
+    }
+    
+    .font-color:hover{
+      font-size: 14px !important;
+    color: #379fd5 !important;
+    }
+    .text-small {
+    font-size: 1.1em !important;
+    font-weight: initial !important;
+}
+a{
+  color: white !important;
+}
+a:hover{
+  color: #379fd5 !important;
+}
+span:hover{
+  color: #379fd5 ;
+}
+.btn-outline-primary span:hover{
+  color: white;
+}
+.sh-14 {
+    height: 5rem !important;
+}
+#preloader{
+  position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background-color: #222222;
+    z-index: 999999;
+}
+[data-loader="circle-side"]{
+  position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    margin-left: -25px;
+    margin-top: -25px;
+    -webkit-animation: circle infinite .95s linear;
+    -moz-animation: circle infinite .95s linear;
+    -o-animation: circle infinite .95s linear;
+    animation: circle infinite .95s linear;
+    border: 8px solid #369fd5;
+    border-top-color: #0dcaf059;
+    border-right-color: #0dcaf059;
+    border-bottom-color: #0dcaf059;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    border-radius: 100%; 
+}
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0);
+    -moz-transform: rotate(0);
+    -ms-transform: rotate(0);
+    -o-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    /* -webkit-transform: rotate(360deg); */
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+    </style>
+  </head>
+<body class="h-100">
+  <div id="preloader">
+		<div data-loader="circle-side"></div>
+	</div>
+  <input type="hidden" id="browsername">
+  <app-root></app-root>
+  </div>
+  <script src="assets/js/vendor/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/vendor/autoComplete.min.js"></script>
+    <script src="assets/js/vendor/clamp.min.js"></script>
+
+    <script src="assets/icon/acorn-icons.js"></script>
+    <script src="assets/icon/acorn-icons-interface.js"></script>
+
+    <script src="assets/js/vendor/Chart.bundle.min.js"></script>
+
+    <script src="assets/js/vendor/chartjs-plugin-datalabels.js"></script>
+
+    <script src="assets/js/vendor/chartjs-plugin-rounded-bar.min.js"></script>
+
+    <!-- Vendor Scripts End -->
+
+    <!-- Template Base Scripts Start -->
+    <script src="assets/js/base/helpers.js"></script>
+    <script src="assets/js/base/globals.js"></script>
+    <script src="assets/js/base/nav.js"></script>
+    <script src="assets/js/base/search.js"></script>
+    <script src="assets/js/base/settings.js"></script>
+    <script src="assets/js/cs/checkall.js"></script>
+    <script src="assets/js/pages/products.list.js"></script>
+    <!-- Template Base Scripts End -->
+    <!-- Page Specific Scripts Start -->
+<script src="//cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script src="assets/js/cs/charts.extend.js"></script>
+    <script>
+      $(document).ready(function(){
+        var i= window.location.pathname
+      if(i=='/Dashboard'){
+        $('body').append("<script src='assets/apexcharts-bundle/js/apexcharts.min.js'><\/script>")
+      }
+      });
+    </script>
+    
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/scripts.js"></script>
+    <script src="assets/js/functions.js"></script>
+    <script>
+      $(document).ready( function () {
+        if(window.location.pathname=='/HistoricalList'){
+          
+        }
+        else{
+          $('table').DataTable();
+        }
+
+       $("#pandl").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#closepandl").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#rejectpandl").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#FilterId1").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#closeFilterId1").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#rejectFilterId1").change(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#first").click(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#endLine").click(function(){
+        window.location.href="HistoricalList"
+       })
+       $("#Pending").click(function(){
+        window.location.href="HistoricalList"
+       })
+      });
+  </script>
+    <script>
+      $(document).ready(function(){
+        $('#addsection').click(function() {
+		      var equipmentSectionToAdd = '<div class="padding-bag-10 algorow" *ngIf="IsStopLoss"><div class="row"><div class="col-lg-1"><label class="mar-b-0">B/S</label><select class="nice-select wide wide1 form-select mar-top-23" formControlName="CallType1"><option value="1" selected>Buy</option><option value="2">Sell</option></select></div><div class="col-lg-1"><label class="mar-b-0">CE/PE</label><select class="nice-select wide wide1 form-select mar-top-23" formControlName="PECE1"><option value="1" selected>PE</option><option value="2">CE</option></select></div><div class="col-lg-1"><label class="mar-b-0">Quantity</label><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border mar-top-23" name="product" required formControlName="OrderQuantity1" max="999999" oninput="if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" maxlength="6"/></div><div class="col-lg-1"><label class="mar-b-0">Strike</label><select class="nice-select wide wide1 form-select mar-top-23" formControlName="StratergyID2"><option value="" selected>Select Strike</option><option value="{{mQ1.symbolIdentifierId}}" *ngFor="let mQ1 of toptionlistCEU1">{{mQ1.strikePrice}}-{{mQ1.lastTradePrice}}</option></select></div><div class="col-lg-1"><label class="mar-b-0 ">S/L Type</label><select class="nice-select wide wide1 form-select mar-top-23" (change)="algotypechangeoption1()" formControlName="AlgoType1" ><option value="1">Pointwise</option><option value="2">Percentage Wise</option></select></div><div class="col-lg-7 row" *ngIf="IsStopLoss"><div class="col-lg-3"><div class="row"><div class="col-lg-6"><div class="mb-3 filled tooltip-end-top"><label class="mar-b-0">Stop-loss</label> <label class="float-right" style="color: green;">({{Stoploss1}})</label><input class="form-control text-border" formControlName="Stoploss1" placeholder="0" name="EstStockPrice2" /></div></div><div class="col-lg-6"><div class="mb-3 filled tooltip-end-top"><label class="mar-b-0">Take Profit</label> <label class="float-right" style="color: green;">({{Stoploss1}})</label><input class="form-control text-border" formControlName="Takeprofit1" placeholder="0" name="EstStockPrice2" /></div></div></div></div><div class="col-lg-9"><div class="row"><div class="col-12 col-sm-2 col-xl-2"><p class="mar-b-0"> Limit for that day</p><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border" formControlName="SpecificLimitofDay1" placeholder="0" name="SpecificLimitofDay" /></div><div class="col-12 col-sm-2 col-xl-2"><p class="mar-b-0 mar-t-f">Overall Capital Loss</p><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border" formControlName="OverallCapital1" placeholder="0" name="OverallCapital" /></div><div class="col-12 col-sm-2 col-xl-2"><p class="mar-b-0 mar-t-f">Overall Capital Profit</p><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border" formControlName="OverallCapitalProfit1" placeholder="0" name="OverallCapitalProfit" /></div><div class="col-12 col-sm-2 col-xl-2"><p class="mar-b-0">Trailing Stop Loss</p><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border" formControlName="TrailingStopLoss1" placeholder="0" name="TrailingStopLoss" /></div><div class="col-12 col-sm-2 col-xl-2"><p class="mar-b-0">Trailing Profit</p><input type="number" min="0" onkeypress="return (event.charCode == 8 || event.charCode == 0) ? null : event.charCode >= 48 && event.charCode <= 57" class="form-control text-border" formControlName="TrailingProfit1" placeholder="0" name="TrailingProfit1"/></div><div class="col-12 col-sm-1 col-xl-1"><label class="form-check custom-icon" style="margin-top: 30px;"><input type="checkbox" class="form-check-input" checked></label></div><div class="col-12 col-sm-1 col-xl-1" style="margin-top: 30px;"><button type="button" class="btn btn-sm btn-icon btn-icon-start btn-outline-primary">Start</button></div></div></div></div></div></div>'
+
+          $('#addrow').append(equipmentSectionToAdd) ;
+        });
+
+      getBrowser = () => {
+    const userAgent = navigator.userAgent;
+    let browser = "unkown";
+    // Detect browser name
+    browser = (/ucbrowser/i).test(userAgent) ? 'UCBrowser' : browser;
+    browser = (/edg/i).test(userAgent) ? 'Edge' : browser;
+    browser = (/googlebot/i).test(userAgent) ? 'GoogleBot' : browser;
+    browser = (/chromium/i).test(userAgent) ? 'Chromium' : browser;
+    browser = (/firefox|fxios/i).test(userAgent) && !(/seamonkey/i).test(userAgent) ? 'Firefox' : browser;
+    browser = (/; msie|trident/i).test(userAgent) && !(/ucbrowser/i).test(userAgent) ? 'IE' : browser;
+    browser = (/chrome|crios/i).test(userAgent) && !(/opr|opera|chromium|edg|ucbrowser|googlebot/i).test(userAgent) ? 'Chrome' : browser;;
+    browser = (/safari/i).test(userAgent) && !(/chromium|edg|ucbrowser|chrome|crios|opr|opera|fxios|firefox/i).test(userAgent) ? 'Safari' : browser;
+    browser = (/opr|opera/i).test(userAgent) ? 'Opera' : browser;
+
+    // detect browser version
+    switch (browser) {
+        case 'UCBrowser': return `${browser}`;
+        case 'Edge': return `${browser}`;
+        case 'GoogleBot': return `${browser}`;
+        case 'Chromium': return `${browser}`;
+        case 'Firefox': return `${browser}`;
+        case 'Chrome': return `${browser}`;
+        case 'Safari': return `${browser}`;
+        case 'Opera': return `${browser}`;
+    }
+}
+
+
+console.log(getBrowser());
+$('#browsername').val(getBrowser())
+      });
+    </script>
+    <script>
+      $(document).ready(function(){
+        //$('#browsername').val(navigator.userAgentData.brands[0].brand)
+        $('select').val($("select option:first").val());
+        $("select")[0].selectedIndex = 0;
+        $("select")[1].selectedIndex = 0;
+        $("select")[2].selectedIndex = 0;
+        $("select")[3].selectedIndex = 0;
+        $("select")[4].selectedIndex = 0;
+      });
+      </script>
+    <script>
+      $(document).ready(function(){
+        setTimeout(function () {
+          $(".nav-link:first").addClass("active");
+        }, 200);
+      });
+      </script>
+     
+    <script>
+      $(document).ready(function(){
+    
+     
+    
+      $('#verify-otp').hide();
+  $('#request-otp').on('click',function(){
+    $('#verify-otp').show();
+  });
+});
+  </script>
+  <script>
+    $(document).ready(function(){
+      setTimeout(function () {
+      $('.editdata').click(function(){
+        //console.log("done")
+        setTimeout(function () {
+          $('#text-value').attr('href',$('#cars').children(":selected").attr("id")+""+$('#text-value1').val())
+        },1000)
+        
+      
+      });
+    },1000)
+    });
+  </script>
+  <script>
+    function showtext() {
+  var x = document.getElementById("text-value1");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+
+</script>
+ 
+  <script>
+    $(document).ready(function(){
+    $(".SwitchFilledbuy").hide();
+    $("#customSwitchFilledbuy").click(function() {
+        if($(this).is(":checked")) {
+            $(".SwitchFilledbuy").show();
+            $("#customSwitchFilledbuy").val(true)
+        } else {
+            $(".SwitchFilledbuy").hide();
+            $("#customSwitchFilledbuy").val(false)
+        }
+        $(".customSwitchFilleddatabuy").val( $("#customSwitchFilledbuy").val())
+    });
+    $(".SwitchFilledbuy1").hide();
+    $("#customSwitchFilledbuy1").click(function() {
+        if($(this).is(":checked")) {
+            $(".SwitchFilledbuy1").show();
+            $("#customSwitchFilledbuy1").val(true)
+        } else {
+            $(".SwitchFilledbuy1").hide();
+            $("#customSwitchFilledbuy1").val(false)
+        }
+        $(".customSwitchFilleddatabuy1").val( $("#customSwitchFilledbuy1").val())
+    });
+    })
+    </script>
+  <script>
+    $(document).ready(function(){
+      
+     
+    $(".SwitchFilled").hide();
+    $(".SwitchFilled1").hide();
+    $(".SwitchFilled3").hide();
+    $(".SwitchFilled4").hide();
+    $(".customSwitchFilleddata1").val('false')
+    $(".customSwitchFilleddata").val('false')
+    $("#customSwitchFilled").click(function() {
+        if($(this).is(":checked")) {
+            $(".SwitchFilled").show();
+            $("#customSwitchFilled").val(true)
+        } else {
+            $(".SwitchFilled").hide();
+            $("#customSwitchFilled").val(false)
+        }
+        $(".customSwitchFilleddata").val( $("#customSwitchFilled").val())
+    });
+    $("#customSwitchFilled2").click(function() {
+        if($(this).is(":checked")) {
+          $("#customSwitchFilled2").val(true)
+            $(".SwitchFilled1").show();
+        } else {
+            $(".SwitchFilled1").hide();
+            $("#customSwitchFilled2").val(false)
+        }
+        $(".customSwitchFilleddata1").val( $("#customSwitchFilled2").val())
+    }); 
+    $("#customSwitchFilled3").click(function() {
+        if($(this).is(":checked")) {
+            $(".SwitchFilled3").show();
+            $("#customSwitchFilled3").val(true)
+        } else {
+            $(".SwitchFilled3").hide();
+            $("#customSwitchFilled3").val(false)
+        }
+        $(".customSwitchFilleddata").val( $("#customSwitchFilled3").val())
+    });
+    $("#customSwitchFilled6").click(function() {
+        if($(this).is(":checked")) {
+          $("#customSwitchFilled6").val(true)
+            $(".SwitchFilled4").show();
+        } else {
+            $(".SwitchFilled4").hide();
+            $("#customSwitchFilled6").val(false)
+        }
+        $(".customSwitchFilleddata1").val( $("#customSwitchFilled6").val())
+    }); 
+    $("#customSwitchFilled5").click(function() {
+        if($(this).is(":checked")) {
+          $("#customSwitchFilled5").val(true)
+            $(".SwitchFilled1").show();
+        } else {
+            $(".SwitchFilled1").hide();
+            $("#customSwitchFilled5").val(false)
+        }
+        $(".customSwitchFilleddata1").val( $("#customSwitchFilled5").val())
+    }); 
+    $("#customSwitchFilled4").click(function() {
+        if($(this).is(":checked")) {
+          $("#customSwitchFilled4").val(true)
+            $(".SwitchFilled").show();
+        } else {
+            $(".SwitchFilled").hide();
+            $("#customSwitchFilled4").val(false)
+        }
+        $(".customSwitchFilleddata").val( $("#customSwitchFilled4").val())
+    }); 
+  });
+</script>
+<script>
+  $(document).ready(function(){
+    function playSound(sound) {
+      var song1 = document.getElementById(sound);
+      song1.muted = true;
+      song1.play();
+    }
+  })
+</script>
+<script>
+  $(document).ready(function(){
+        $("#myInput").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $(".Allwallpaper").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+        });
+        $("#txtActive").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $(".Allwallpaper").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+        });
+        $("#txtReject").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $(".Allwallpaper").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+        });
+        $("#txtRejectlog").on("keyup", function() {
+              var value = $(this).val().toLowerCase();
+              $(".Allwallpaper").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+              });
+        });
+  });
+  
+</script>
+<!-- <script>
+  function copyToClipboard() {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val('https://algoresponcetrading.in/BrokerResponse.html').select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+</script> -->
+</body>
+</html>

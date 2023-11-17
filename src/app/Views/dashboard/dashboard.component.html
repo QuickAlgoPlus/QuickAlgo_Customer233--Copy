@@ -1,0 +1,2565 @@
+<app-header></app-header>
+<style>
+  ::-webkit-scrollbar {
+    width: 5px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 550px;
+
+    }
+  }
+
+  .muy-4 {
+    margin-bottom: 0.5rem !important;
+  }
+
+   .green {
+    color: #00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important;
+  }
+
+  .mb-3 {
+    margin-bottom: 5px !important;
+  }
+
+  @media (min-width: 576px) {
+    .modal-dialog {
+      max-width: 550px;
+
+    }
+  }
+
+  .form-switch.form-check .form-check-input {
+    border-radius: 13px;
+    width: 4em;
+    height: 2em;
+  }
+
+  .nav-tabs-data {
+    margin-top: 40px;
+  }
+
+  .button-tabs {
+    float: right;
+    margin-top: -55px
+  }
+
+  .padding-top {
+    padding-top: 10px;
+  }
+
+  .padding-full-15 {
+    padding: 15px;
+  }
+
+  .padding-b-15 {
+    margin-bottom: 20px
+  }
+
+  .padding-bag-15 {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+  }
+
+  .padding-bag-10 {
+    margin-top: 10px;
+    border-top: 1px solid #e8e5e5;
+    padding: 10px;
+    border-color: #585858;
+  }
+
+  .ma-right {
+    margin-right: 15px;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .o-h-l-p {
+    margin: 15px 0px;
+    text-align: center;
+    border: 1px solid;
+    border-left: 0px;
+    border-right: 0px;
+    padding: 10px 0px;
+    border-color: #585858;
+  }
+
+  .background {
+    background: #378488;
+  }
+
+  .padding-10 {
+    padding: 10px 0px 0px 0px;
+  }
+
+  .float-right {
+    float: right;
+  }
+
+  .text-border {
+    border: 1px solid #e6e6e6;
+    border-color: #585858;
+  }
+
+  .text-right {
+    text-align: right;
+  }
+
+  .col-12-1 {
+    padding: 0px;
+  }
+
+  .padding-15 {
+    --bs-gutter-x: 1.5rem;
+  }
+
+  .p-m-t {
+    padding: 0px;
+    margin-top: -100px;
+  }
+
+  .mar-hig {
+    height: 30px;
+    margin: auto;
+  }
+
+  .mar-righ {
+    margin-right: -20px
+  }
+
+  .mb-0 {
+    padding-left: 0px;
+  }
+
+  .filled .form-control {
+    min-height: 35px;
+    background: #378488;
+    padding-left: 15px;
+  }
+
+  .justify-content-center {
+    justify-content: center !important;
+  }
+
+  .mar-righ-15 {
+    margin-left: 25px;
+    width: 90px;
+  }
+
+  .h-auto {
+    height: auto;
+  }
+
+  .mar-b-0 {
+    margin-top: 10px;
+    margin-bottom: 0px
+  }
+
+  .white {
+    color: #d9d9d9
+  }
+
+  input {
+    color-scheme: dark;
+  }
+
+  .mar-top-23 {
+    margin-top: 23px
+  }
+
+  .mar-top-15 {
+    margin-top: 15px
+  }
+
+  .text-truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+  }
+
+  .font-size-10 {
+    font-size: 13px;
+  }
+  .font-size-15{
+    font-size: 16px;
+  }
+  .nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 14px;
+    background: #378488 !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+}
+.mt-4 {
+    margin-top: 7.5rem !important;
+}
+.text-medium {
+    font-size: 0.9em !important;
+    font-weight: 700;
+}
+@media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+.h-over {
+    max-height: auto;
+  }
+  .p-m-t{
+  margin-top: -30px;
+}
+.cardbody{
+  padding-bottom: 65px
+}
+}
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 7.9rem !important;
+}
+.p-m-t{
+  margin-top: -100px;
+}
+.cardbody{
+  padding-bottom: 0px
+}
+.h-over {
+    max-height: 745px;
+    overflow: auto;
+  }
+  }
+</style>
+<div id="root">
+
+  <main>
+    <div class="container">
+      
+      <div class="row">
+        <div class="col">
+          <!-- Title Start -->
+          <!-- Title End -->
+          <div class="mb-5">
+            <div class="row g-2 nify-row d-flex mobileview">
+              <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                <div class="card hover-scale-up cursor-pointer">
+                  <div class="h-100 row g-0 card-body align-items-center py-3">
+                   
+                    <div class="col">
+                      <div class="row gx-2 d-flex align-content-center">
+                        <div class="col-4 col-md-5 ">
+                          <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                          
+                        </div>
+                        <div class="col-4 col-md-2">
+                          <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                          <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                          <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                          <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-2 desktopview">
+              <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                <div class="card hover-scale-up cursor-pointer">
+                  <div class="h-100 row g-0 card-body align-items-center py-3">
+                   
+                    <div class="col">
+                      <div class="row gx-2 d-flex align-content-center">
+                        <div class="col-4 col-md-5 ">
+                          <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                          
+                        </div>
+                        <div class="col-4 col-md-2">
+                          <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                          <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                          <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                          <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row mb-2 mt-4">
+            <!-- Logs Start -->
+            <div class="col-xl-5 mb-2">
+              <!-- <div>{{customerID}}:{{Token}}</div> -->
+              <h2 class="small-title">Dashboard</h2>
+              <div class="card mb-5 heg-25 heg-17">
+                <div class="card-body cardbody">
+                  
+                  <div class="tab-content">
+                    <div class="tab-pane fade active show" id="Portfolio" role="tabpanel">
+                      <input type="hidden" id="totalPL" value="{{todaysPL1}}">
+                      <h6 class="mb-1 font-weight-bold text-center">Today P & L <span
+                          class="text-success" *ngIf="todaysPL1>=0">{{todaysPL1}}</span> <span class="text-danger"
+                          *ngIf="todaysPL1<0">{{todaysPL1}}</span></h6>
+                      <!-- <h6 class="mb-1 font-weight-bold text-center" *ngFor="let mQ5 of GetPortfolio">Today P & L <span class="text-danger">{{mQ5.todaysPL}}</span></h6> -->
+                      <!--<div class="custom-legend-container mb-3 pb-3 d-flex flex-row"></div>-->
+                      <!-- Custom legend template used by js -->
+                      <template class="custom-legend-item">
+                        <a href="#" class="d-flex flex-row g-0 align-items-center me-5">
+                          <div class="pe-2">
+                            <div
+                              class="icon-container border sh-5 sw-5 rounded-xl d-flex justify-content-center align-items-center">
+                              <i class="icon"></i>
+                            </div>-->
+                          </div>
+                          <div>
+                            <div class="text p mb-0 d-flex align-items-center text-small text-muted">Title</div>
+                            <div class="value cta-4">Value</div>
+                          </div>
+                        </a>
+                      </template>
+                      <!-- Custom Legend Template End -->
+                      <div class="sh-25">
+                        <div class="mt-5" id="chart20" class="chart20"></div>
+                        <!--<div class="card-footer bg-transparent border-top-0 p-m-t">
+                          <div class="d-flex align-items-center justify-content-between text-center">
+                            <div>
+                              <input type="hidden" id="totalInvestment"
+                                value="{{totalInvestment}}">
+                              <h6 class="mb-1 font-weight-bold" style="color:#000000!important; font-weight:600;" >{{totalInvestment}}
+                              </h6>
+                              <p class="mb-0 text-secondary" style="color:#000000!important; font-weight:600;" >Total Invested</p>
+                            </div>
+                            <div class="mb-1">
+
+                            </div>
+                            <div style="display: none;">
+                              <div class="totalplPercentage" style="color:#000000!important; font-weight:600;" >{{totalplPercentage}}%</div>
+                            </div>
+                            <div>
+                              <h6 class="mb-1 font-weight-bold" style="color:#000000!important; font-weight:600;" >{{currentValue}}
+                              </h6>
+                              <p class="mb-0 text-secondary" style="color:#000000!important; font-weight:600;" >Current Value</p>
+                            </div>
+                          </div>
+                        </div>-->
+                        <!-- Custom tooltip template used by js -->
+
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h2 class="small-title1"></h2>
+              <div class="card">
+                <div class="card-body" style="padding: 5px;text-align: center;">
+                  <div class="text-primary" style="color:#23accb!important; font-weight:600;" > Whatever p&l is visible in our software have not including any brokerage and taxes.</div>
+                </div>
+              </div>
+              <h2 class="small-title1"></h2>
+              <div class="card mb-5 heg-25">
+                <div class="card-body">
+                  <div class="row">
+                  <div class="col-xl-6" style="color:#000000!important; font-weight:600;" >
+                  <p>IP Address: {{GetCustDeviceLog.ipAddress}}</p>
+                  </div>
+                  <div class="col-xl-6 text-right" style="color:#000000!important; font-weight:600;" >
+                    <p>Login Time: {{GetCustDeviceLog.logDate| date:'yyyy-MM-dd HH:mm:ss'}}</p>
+                  </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-7">
+              <div class="row">
+                <div class="col-xl-6 mb-2">
+                  <h2 class="small-title"> Top Gainers</h2>
+                  <div class="card h-xl-100-card">
+                    <div class="card-body scroll-out h-100">
+                      <div class="scroll-out font-size-10">
+                        <div class="scroll-by-count" data-count="8">
+                          <div class="card mb-2">
+                            <div class="card-body pt-0 pb-0 h-100">
+                              
+                          <div class="row g-0 h-100 align-content-center">
+                            <div class="col-6 col-md-7 d-flex align-items-center mb-2 mb-md-0" style="color:#000000!important; font-weight:600;" >
+                              Product
+                            </div>
+                            <div class="col-6 col-md-2 d-flex align-items-center mb-2 mb-md-0 justify-content-center" style="color:#000000!important; font-weight:600;" >
+                              Point
+                            </div>
+                            <div class="col-6 col-md-1 d-flex align-items-center mb-2 mb-md-0">
+                              
+                            </div>
+                            <div class="col-6 col-md-2 d-flex align-items-center mb-2 mb-md-0 justify-content-end" style="color:#000000!important; font-weight:600;" >
+                              LTP
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                          <div class="card mb-2 sh-10 sh-md-8" *ngFor="let Top of TopTopGainerList">
+                            <div class="card-body pt-0 pb-0 h-100">
+                              
+                              <div class="row g-0 h-100 align-content-center">
+                                <div class="col-6 col-md-7 d-flex align-items-center mb-2 mb-md-0">
+                                  <a class="body-link text-truncate">
+                                    <div class="" style="color:#000000!important; font-weight:600;" >{{Top.identifier}}</div>
+                                    <div class="text-small text-muted text-truncate" style="color:#000000!important; font-weight:600;" >{{Top.product}}</div>
+                                  </a>
+                                </div>
+                               
+                                <div class=" col-2 col-md-2 d-flex align-items-center text-medium text-danger justify-content-center"
+                                  *ngIf="Top.priceChangePercentage<0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                                  <span class="font-size-15">{{Top.priceChangePercentage}}</span>
+                                </div>
+                               
+                                <div class="col-2 col-md-2 d-flex align-items-center text-success justify-content-center"
+                                  *ngIf="Top.priceChangePercentage>=0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                                  <span class="font-size-15">{{Top.priceChangePercentage}}</span>
+                                </div>
+                                <div
+                                class="col-1 col-md-1 d-flex align-items-center text-medium text-danger justify-content-center">
+                              </div>
+                                <div *ngIf="Top.priceChangePercentage<0"
+                                  class="col-3 col-md-2 d-flex align-items-center justify-content-end font-size-15  text_value1 red">
+                                  <span>{{Top.lastTradePrice}}</span>
+                                </div>
+                                <div *ngIf="Top.priceChangePercentage>=0"
+                                class="col-3 col-md-2 d-flex align-items-center justify-content-end font-size-15  text_value green">
+                                <span>{{Top.lastTradePrice}}</span>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xl-6 mb-2">
+                  <h2 class="small-title">Losers</h2>
+                  <div class="card h-xl-100-card">
+                    <div class="card-body scroll-out h-100">
+                      <div class="scroll-out font-size-10">
+                        <div class="scroll-by-count" data-count="8">
+                          <div class="card mb-2">
+                            <div class="card-body pt-0 pb-0 h-100">
+                              
+                          <div class="row g-0 h-100 align-content-center">
+                            <div class="col-6 col-md-7 d-flex align-items-center mb-2 mb-md-0" style="color:#000000!important; font-weight:600;" >
+                              Product
+                            </div>
+                            <div class="col-6 col-md-2 d-flex align-items-center mb-2 mb-md-0 justify-content-center" style="color:#000000!important; font-weight:600;" >
+                              Point
+                            </div>
+                            <div class="col-6 col-md-1 d-flex align-items-center mb-2 mb-md-0" style="color:#000000!important; font-weight:600;" >
+                              
+                            </div>
+                            <div class="col-6 col-md-2 d-flex align-items-center mb-2 mb-md-0 justify-content-end" style="color:#000000!important; font-weight:600;" >
+                              LTP
+                            </div>
+                          </div>
+                          </div>
+                          </div>
+                          <div class="card mb-2 sh-10 sh-md-8" *ngFor="let Top of TopLooserList">
+                            <div class="card-body pt-0 pb-0 h-100">
+                              <div class="row g-0 h-100 align-content-center">
+                                <div class="col-6 col-md-7 d-flex align-items-center mb-2 mb-md-0">
+                                  <a class="body-link text-truncate">
+                                    <div class="" style="color:#000000!important; font-weight:600;" >{{Top.identifier}}</div>
+                                    <div class="text-small text-muted text-truncate" style="color:#000000!important; font-weight:600;" >{{Top.product}}</div>
+                                  </a>
+                                </div>
+                                
+                                <div
+                                  class="col-2 col-md-2 d-flex align-items-center text-medium text-danger justify-content-center"
+                                  *ngIf="Top.priceChangePercentage<0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                                  <span class="font-size-15">{{Top.priceChangePercentage}}</span>
+                                </div>
+                                <div
+                                  class="col-2 col-md-2 d-flex align-items-center text-success justify-content-center"
+                                  *ngIf="Top.priceChangePercentage>=0">
+                                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                                  <span class="font-size-15">{{Top.priceChangePercentage}}</span>
+                                </div>
+                                <div
+                                  class="col-1 col-md-1 d-flex align-items-center text-medium text-danger justify-content-center">
+                                </div>
+                                <div *ngIf="Top.priceChangePercentage<0"
+                                  class="col-3 col-md-2 d-flex align-items-center justify-content-end font-size-15  text_value1 red">
+                                  <span>{{Top.lastTradePrice}}</span>
+                                </div>
+                                <div *ngIf="Top.priceChangePercentage>=0"
+                                class="col-3 col-md-2 d-flex align-items-center justify-content-end font-size-15  text_value green">
+                                <span>{{Top.lastTradePrice}}</span>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <!-- Products End -->
+          </div>
+        </div>
+        <div *ngFor="let mQ of dayorderlist">
+          <input type="hidden" class="type{{mQ.orderID}}" value="{{mQ.orderType}}" *ngIf="mQ.orderType==1">
+          <input type="hidden" class="type{{mQ.orderID}}" value="{{mQ.orderType}}" *ngIf="mQ.orderType==2">
+        </div>
+        <div class="modal fade" id="exampleModal1" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault1"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" *ngIf="getdatawatchlist">
+                <form [formGroup]="detdata">
+                  <div class="row">
+                    <div class="mb-2">
+                      <label class="form-check w-100 mb-0">
+
+                        <div class="row">
+                          <div class=" col-sm-10 col-xl-10">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                          </div>
+                          <div class=" col-sm-2 col-xl-2">
+                            <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class=" col-sm-10 col-xl-10">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                          </div>
+                          <div class=" col-sm-2 col-xl-2">
+                            <p class="mb-3 text-alternate" *ngIf="getdatawatchlist.priceChangePercentage >= 0"><span
+                                class="text-success">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                            <p class="mb-3 text-alternate" *ngIf="getdatawatchlist.priceChangePercentage < 0"><span
+                                class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col-lg-12 center">
+
+                      <button type="button" class="btn btn-success btn-icon btn-icon-start ms-1 h-auto"
+                        data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                          class="acorn-icons acorn-icons-arrow-top me-1">
+                          <path
+                            d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3">
+                          </path>
+                        </svg>
+                        <span>Buy</span><br>
+                        <span>{{getdatawatchlist.buyPrice}}</span>
+                      </button>
+                      <button type="button" class="btn btn-danger btn-icon btn-icon-start ms-1 h-auto"
+                        data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                          class="acorn-icons acorn-icons-arrow-bottom me-1">
+                          <path
+                            d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17">
+                          </path>
+                        </svg>
+                        <span>Sell</span><br>
+                        <span>{{getdatawatchlist.sellPrice}}</span>
+                      </button>
+
+                    </div>
+                  </div>
+                  <div class="row o-h-l-p">
+                    <div class="col-lg-3 "><span>Open</span></div>
+                    <div class="col-lg-3"><span>High</span></div>
+                    <div class="col-lg-3"><span>Low</span></div>
+                    <div class="col-lg-3"><span>Prev.Close</span></div>
+                    <div class="col-lg-3 "><span>{{getdatawatchlist.openPrice}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.high}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.low}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.closePrice}}</span></div>
+                  </div>
+                  <div class="row background">
+                    <div class="col-lg-6"><span>Volume</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.totalQtyTraded}}</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6"><span>Avg.Trade Price</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.averageTradedPrice}}</span></div>
+                  </div>
+                  <div class="row background">
+                    <div class="col-lg-6"><span>Last Traded Price</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.lastTradePrice}}</span></div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="OPTIONSmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault"
+          aria-hidden="true">
+          <div class="modal-dialog" style="max-width: 90%;">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault1"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" style="padding: 10px;">
+                <div class="row g-0">
+                  <div class="col-lg-6">
+                    <div class="card mb-2 bg-transparent no-shadow d-none d-md-block">
+                      <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end">
+                        <h3>CE</h3>
+                      </div>
+                      <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end">
+                        <h3>BUY</h3>
+                      </div>
+                      <div class="card-body pt-0 pb-0 sh-3">
+
+                        <div class="row g-0 h-100 align-content-center">
+
+                          <!-- <div class="col-md-1 d-flex align-items-center mb-2 mb-md-0 text-muted text-small">ID</div> -->
+                          <div class="col-md-4 d-flex align-items-center text-muted text-small">Product</div>
+                          <div
+                            class="col-md-2 text-center align-items-center text-muted text-small justify-content-end">
+                            Strikeprice</div>
+                          <div class="col-md-2 text-center align-items-center text-muted text-small justify-content-end"
+                            style="margin-right: -15px;">Price</div>
+                          <div class="col-md-1 text-center align-items-center text-muted text-small justify-content-end"
+                            style="margin-right: -10px;">High</div>
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                            Low</div> 
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                          </div>
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-2 sh-10 sh-md-8" *ngFor="let mQ1 of toptionlistCEU">
+
+                      <div class="card-body pt-0 pb-0 h-100" style="padding: 10px;">
+                        <div class="row g-0 h-100 align-content-center">
+                          <div class="pt-sm-0 pb-sm-0 h-100 row">
+                            <div class="col-12 col-md-4 d-flex align-items-center mb-2 mb-md-0">
+                              <a href="" class="body-link text-truncate">
+                                <div class="">{{mQ1.identifier}}</div>
+                                <div class="text-small text-muted text-truncate">{{mQ1.product}}</div>
+                              </a>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-2 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.strikePrice}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-2 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.buyPrice}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.high}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.low}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center text-medium justify-content-center"
+                              data-bs-toggle="modal" data-bs-target="#exampleModal1">
+
+                              <span class="text-medium">{{mQ1.cItemText}}</span>
+                            </div>
+                            <!-- (click)="getsetdataforwatchdata(mQ1.symbolIdentifierId)" -->
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center text-medium text-danger justify-content-center"
+                              data-bs-toggle="modal" data-bs-target="#exampleModal1">
+                              <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto"
+                                data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1"
+                                (click)="getsetdatatoptionlistCEU(mQ1.symbolIdentifierId)">
+                                <span>O</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="card mb-2 bg-transparent no-shadow d-none d-md-block">
+                      <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end">
+                        <h3>PE</h3>
+                      </div>
+                      <div class="col-md-12 text-center align-items-center text-muted text-small justify-content-end">
+                        <h3>SELL</h3>
+                      </div>
+                      <div class="card-body pt-0 pb-0 sh-3" style="padding: 10px;">
+
+                        <div class="row g-0 h-100 align-content-center">
+
+                          <!-- <div class="col-md-1 d-flex align-items-center mb-2 mb-md-0 text-muted text-small">ID</div> -->
+                          <div class="col-md-4 d-flex align-items-center text-muted text-small">Product</div>
+                          <div
+                            class="col-md-2 text-center align-items-center text-muted text-small justify-content-end">
+                            Strikeprice</div>
+                          <div class="col-md-2 text-center align-items-center text-muted text-small justify-content-end"
+                            style="margin-right: -15px;">Price</div>
+                          <div class="col-md-1 text-center align-items-center text-muted text-small justify-content-end"
+                            style="margin-right: -10px;">High</div>
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                            Low</div>
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                          </div>
+                          <div
+                            class="col-md-1 text-center align-items-center text-muted text-small justify-content-end">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card mb-2 sh-10 sh-md-8" *ngFor="let mQ1 of optionlistPE">
+
+                      <div class="card-body pt-0 pb-0 h-100" style="padding: 10px;">
+                        <div class="row g-0 h-100 align-content-center">
+                          <div class="pt-sm-0 pb-sm-0 h-100 row">
+                            <div class="col-12 col-md-4 d-flex align-items-center mb-2 mb-md-0">
+                              <a href="" class="body-link text-truncate">
+                                <div class="">{{mQ1.identifier}}</div>
+                                <div class="text-small text-muted text-truncate">{{mQ1.product}}</div>
+                              </a>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-2 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.strikePrice}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-2 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.buyPrice}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.high}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center justify-content-end text-muted text-medium">
+                              <span class="white">{{mQ1.low}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center text-medium justify-content-center">
+
+                              <span class="text-medium">{{mQ1.cItemText}}</span>
+                            </div>
+                            <div
+                              class=" col-sm-6 col-md-1 d-flex align-items-center text-medium text-danger justify-content-center"
+                              data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                              (click)="getsetdataoptionlistPEList(mQ1.symbolIdentifierId)">
+                              <button type="button" class="btn btn-primary btn-icon btn-icon-start ms-1 h-auto"
+                                data-bs-dismiss="modal" aria-label="Close" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal1">
+                                <span>O</span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="pricesmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Algo Trade</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="refracealgo()"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="CustomerAlgoTradeform">
+                  <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div>
+                      <div class="mb-2">
+                        <label class="form-check w-100 mb-0">
+
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span
+                                  class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="row">
+                        <div class="col-lg-6">
+                          <label class="mar-b-0">Stratergy</label>
+                          <select class="nice-select wide wide1 form-select" formControlName="StratergyID">
+                            <option value="" selected>Select Stratergy</option>
+                            <option value="{{mQ.stratergyID}}" *ngFor="let mQ of StratergyList">{{mQ.stratergyName}}
+                            </option>
+                          </select>
+                          <div *ngIf="isSubmitted && f['StratergyID'].errors">
+                            <span *ngIf="f['StratergyID'].errors['required']" class="text-danger">Stratergy Name is
+                              required.</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <label class="mar-b-0">Broker</label>
+                          <select class="nice-select wide wide1 form-select" formControlName="BrokerConfigID">
+                            <option value="" selected>Select Broker</option>
+                            <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">
+                              {{mQ1.brokerName}}</option>
+                          </select>
+                          <div *ngIf="isSubmitted && f['BrokerConfigID'].errors">
+                            <span *ngIf="f['BrokerConfigID'].errors['required']" class="text-danger">Broker Name is
+                              required.</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <label class="mar-b-0">Product Type</label>
+                          <select class="nice-select wide wide1 form-select" formControlName="ProductType">
+                            <option value="" selected>Select Product Type</option>
+                            <option value="1">CNC</option>
+                            <option value="2">MIS</option>
+                          </select>
+                          <div *ngIf="isSubmitted && f['ProductType'].errors">
+                            <span *ngIf="f['ProductType'].errors['required']" class="text-danger">Product Type is
+                              required.</span>
+                          </div>
+                        </div>
+                        <div class="col-lg-6" *ngIf="getdatawatchlist">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label class="mar-b-0">Quantity </label>
+                            <input class="form-control text-border Quantity" formControlName="OrderQuantity"
+                              placeholder="Quantity" name="Quantity" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-12">
+                          <label class="mar-b-0">Stop Loss Type</label>
+                          <select class="nice-select wide wide1 form-select" (change)="algotypechange()"
+                            formControlName="AlgoType">
+                            <!-- <option value="" selected>Select Product Type</option>  -->
+                            <option value="1">Pointwise</option>
+                            <option value="2">Percentage Wise</option>
+                            <option value="3">As per quantity </option>
+
+                          </select>
+                          <div *ngIf="isSubmitted && f['AlgoType'].errors">
+                            <span *ngIf="f['AlgoType'].errors['required']" class="text-danger">AlgoType Type is
+                              required.</span>
+                          </div>
+                          <!-- <div class="col-lg-6">
+                                            <div class="mb-3 filled tooltip-end-top">
+                                              <label>Price </label>
+                                              <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                            </div>
+                                          </div> -->
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="IsStopLoss">
+                        <div class="row">
+                          <p class="col-lg-3 mb-3 filled tooltip-end-top">Stop-loss</p>
+                          <div class="col-lg-5">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <input class="form-control text-border" formControlName="Stoploss" placeholder="0"
+                                name="EstStockPrice2" />
+                              <div *ngIf="isSubmitted && f['Stoploss'].errors">
+                                <span *ngIf="f['Stoploss'].errors['required']" class="text-danger">Stoploss Type is
+                                  required.</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <label class="padding-top">{{Stoploss}}</label>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row padding-bag-10" *ngIf="TakeProfite">
+                        <div class="row">
+                          <p class="col-lg-3 mb-3 filled tooltip-end-top">Take-profit</p>
+                          <div class="col-lg-5">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <input class="form-control text-border" formControlName="Takeprofit" placeholder="0"
+                                name="EstStockPrice2" />
+                              <div *ngIf="isSubmitted && f['Takeprofit'].errors">
+                                <span *ngIf="f['Takeprofit'].errors['required']" class="text-danger">Takeprofit Type is
+                                  required.</span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <label class="padding-top">{{Stoploss}}</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row padding-bag-10">
+                          <div class=" col-sm-5 col-xl-6">
+                            <p class="mar-b-0"> Limit for that day</p>
+                            <input type="number" class="form-control text-border" formControlName="SpecificLimitofDay"
+                              placeholder="0" name="SpecificLimitofDay" />
+                            <div *ngIf="isSubmitted && f['SpecificLimitofDay'].errors">
+                              <span *ngIf="f['SpecificLimitofDay'].errors['required']" class="text-danger">Stock
+                                Specific Limit for that day is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class=" col-sm-6 col-xl-6">
+                            <p class="mar-b-0">Overall Capital Loss</p>
+                            <input type="number" class="form-control text-border" formControlName="OverallCapital"
+                              placeholder="0" name="OverallCapital" />
+                            <div *ngIf="isSubmitted && f['OverallCapital'].errors">
+                              <span *ngIf="f['OverallCapital'].errors['required']" class="text-danger">Overall Capital
+                                Loss is
+                                required.</span>
+                            </div>
+
+                          </div>
+                          <div class=" col-sm-6 col-xl-6">
+                            <p class="mar-b-0">Trailing Stop Loss</p>
+                            <input type="number" class="form-control text-border" formControlName="TrailingStopLoss"
+                              placeholder="0" name="TrailingStopLoss" />
+                            <div *ngIf="isSubmitted && f['TrailingStopLoss'].errors">
+                              <span *ngIf="f['TrailingStopLoss'].errors['required']" class="text-danger">Trailing Stop
+                                Loss is
+                                required.</span>
+                            </div>
+
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Responsive Vertical End -->
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                  (click)="refracealgo()">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order"
+                  (click)="PostCustomerAlgoTrade()">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="pricesmodel1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault"
+          aria-hidden="true">
+          <div class="modal-dialog" style="max-width: 90%;">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Default Portfolio Settings</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="refracealgo()"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="customerOptionsAlgoPE"></form>
+                <form [formGroup]="CustomerOptionsform">
+                  <div class="row">
+                    <div>
+                      <div class="mb-2">
+
+                        <div class="row" *ngIf="getdatawatchlist">
+                          <div class=" col-sm-8 col-xl-8">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}} :
+                              {{getdatawatchlist.buyPrice}}</p>
+                          </div>
+                          <div class=" col-sm-4 col-xl-4 text-right">
+                            <p class="mb-3 text-alternate"><span class="text-danger">Lot Size :
+                                {{getdatawatchlist.priceChangePercentage}}</span></p>
+                          </div>
+                        </div>
+                        <div class="row" *ngIf="getdatawatchlist">
+                          <div class=" col-sm-3 col-xl-2">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <label class="mar-b-0">Symbol </label>
+                              <input class="form-control text-border" placeholder="{{getdatawatchlist.product}}"
+                                name="product" required disabled />
+
+                            </div>
+                          </div>
+
+                          <div class=" col-sm-3 col-xl-3">
+                            <label class="mar-b-0">Expiry</label>
+                            <select (change)="toptionlistallid1(getdatawatchlist.product)" id="expiry"
+                              formControlName="expiryDate" class=" nice-select wide wide1 form-select">
+                              <option value="{{mQ}}" *ngFor="let mQ of toptionexpiry">{{mQ}}</option>
+                            </select>
+                            <!-- <div *ngIf="isSubmitted && foption['expiryDate'].errors">
+                                                <span *ngIf="foption['expiryDate'].errors['required']" class="text-danger">Expiry Name  is
+                                                required.</span>
+                                            </div> -->
+                          </div>
+
+                          <div class=" col-sm-3 col-xl-2">
+                            <label class="mar-b-0">Stratergy</label>
+                            <select (change)="changestatergyID()" class="nice-select wide wide1 form-select"
+                              formControlName="statergyID">
+                              <option value="" selected>Select Stratergy</option>
+                              <option value="{{mQ.stratergyID}}" *ngFor="let mQ of StratergyList">{{mQ.stratergyName}}
+                              </option>
+                            </select>
+                            <!-- <div *ngIf="isSubmitted && foption['statergyID'].errors">
+                                                <span *ngIf="foption['statergyID'].errors['required']" class="text-danger">Stratergy Name  is
+                                                required.</span>
+                                            </div> -->
+                          </div>
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">Broker</label>
+                            <select class="nice-select wide wide1 form-select" formControlName="customerBrokerID">
+                              <option value="" selected>Select Broker</option>
+                              <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">
+                                {{mQ1.brokerName}}</option>
+                            </select>
+                            <!-- <div *ngIf="isSubmitted && foption['customerBrokerID'].errors">
+                                              <span *ngIf="foption['customerBrokerID'].errors['required']" class="text-danger">Broker Name  is
+                                              required.</span>
+                                            </div> -->
+                          </div>
+                          <div class="col-lg-3">
+                            <label class="mar-b-0">Product Type</label>
+                            <select class="nice-select wide wide1 form-select" formControlName="ProductType">
+                              <option value="" selected>Select Product Type</option>
+                              <option value="1">CNC</option>
+                              <option value="2">MIS</option>
+                            </select>
+                            <!-- <div *ngIf="isSubmitted && foption['ProductType'].errors">
+                                              <span *ngIf="foption['ProductType'].errors['required']" class="text-danger">Product Type  is
+                                              required.</span>
+                                            </div> -->
+                          </div>
+                        </div>
+                        <!-- <div class="row" *ngIf="getdatawatchlist">
+                                            <div class=" col-sm-10 col-xl-10">
+                                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+                                              
+                                            </div>
+                                            <div class=" col-sm-2 col-xl-2">
+                                              <p class="mb-3 text-alternate"><span class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                                            </div>
+                                        </div> -->
+                      </div>
+                      <div class="statergyID34">
+                        <div class="row">
+                          <div class="col-lg-4">
+                            <label class="mar-b-0">Star Time</label>
+                            <input type="Time" class="form-control text-border" name="product"
+                              formControlName="startTime" required value="09:30" />
+                            <!-- <div *ngIf="isSubmitted && foption['StratergyID'].errors">
+                                          <span *ngIf="foption['StratergyID'].errors['required']" class="text-danger">Stratergy Name  is
+                                          required.</span>
+                                      </div> -->
+                          </div>
+                          <div class="col-lg-4">
+                            <label class="mar-b-0">End Time</label>
+                            <input type="Time" class="form-control text-border" name="product" formControlName="endTime"
+                              required value="09:30" />
+                            <!-- <div *ngIf="isSubmitted && foption['BrokerConfigID'].errors">
+                                          <span *ngIf="foption['BrokerConfigID'].errors['required']" class="text-danger">Broker Name  is
+                                          required.</span>
+                                        </div> -->
+                          </div>
+                          <div class="col-lg-4">
+                            <label class="mar-b-0">Square off Time</label>
+                            <input type="Time" class="form-control text-border" formControlName="squareoffTime"
+                              name="product" required value="09:30" />
+                            <!-- <div *ngIf="isSubmitted && foption['squareoffTime'].errors">
+                                          <span *ngIf="foption['squareoffTime'].errors['required']" class="text-danger">Product Type  is
+                                          required.</span>
+                                        </div> -->
+                          </div>
+
+                          <!-- <div class="col-lg-6">
+                                            <div class="mb-3 filled tooltip-end-top">
+                                              <label>Price </label>
+                                              <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                            </div>
+                                          </div> -->
+                        </div>
+                        <div class="padding-bag-10" *ngIf="IsStopLoss">
+                          <div class="row">
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">B/S</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23" formControlName="CallType">
+                                <option value="1" selected>Buy</option>
+                                <option value="2">Sell</option>
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['CallType'].errors">
+                                              <span *ngIf="foption['CallType'].errors['required']" class="text-danger">Stratergy Name  is
+                                              required.</span>
+                                          </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">CE/PE</label>
+                              <input type="text" class="form-control text-border mar-top-23" name="product" value="PE"
+                                required disabled />
+                              <!-- <div *ngIf="isSubmitted && foption['BrokerConfigID'].errors">
+                                              <span *ngIf="foption['BrokerConfigID'].errors['required']" class="text-danger">Broker Name  is
+                                              required.</span>
+                                            </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Lots</label>
+                              <input type="number" class="form-control text-border mar-top-23" name="product" required
+                                formControlName="OrderQuantity" />
+                              <!-- <div *ngIf="isSubmitted && foption['OrderQuantity'].errors">
+                                              <span *ngIf="foption['OrderQuantity'].errors['required']" class="text-danger">Product Type  is
+                                              required.</span>
+                                            </div> -->
+                            </div>
+
+                            <!-- <div class="col-lg-6">
+                                                <div class="mb-3 filled tooltip-end-top">
+                                                  <label>Price </label>
+                                                  <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                                </div>
+                                              </div> -->
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Strike</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                formControlName="StratergyID1">
+                                <option value="" selected>Select Strike</option>
+                                <option value="{{mQ1.symbolIdentifierId}}" *ngFor="let mQ1 of optionlistPE1">
+                                  {{mQ1.strikePrice}}</option>
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['StratergyID'].errors">
+                                                <span *ngIf="foption['StratergyID'].errors['required']" class="text-danger">Stratergy Name  is
+                                                required.</span>
+                                            </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Op Type</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                formControlName="OptionsType">
+                                <option value="" selected>Select OptionsType </option>
+                                <option value="1" selected>ITM </option>
+                                <option value="2" selected>ATM </option>
+                                <option value="3" selected>OTM </option>
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['StratergyID'].errors">
+                                                  <span *ngIf="foption['StratergyID'].errors['required']" class="text-danger">Stratergy Name  is
+                                                  required.</span>
+                                              </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">S/L Type</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                (change)="algotypechangeoption()" formControlName="AlgoType">
+                                <!-- <option value="" selected>Select Product Type</option>  -->
+                                <option value="1">Pointwise</option>
+                                <option value="2">Percentage Wise</option>
+                                <option value="3">As per quantity </option>
+
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                            </div>
+                            <div class="col-lg-6 row" *ngIf="IsStopLoss">
+                              <div class="col-lg-6">
+                                <div class="row">
+
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Stop-loss</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Stoploss"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Stoploss'].errors">
+                                                          <span *ngIf="foption['Stoploss'].errors['required']" class="text-danger">Stoploss Type  is
+                                                          required.</span>
+                                                        </div> -->
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Take Profit</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Takeprofit"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Takeprofit'].errors">
+                                                          <span *ngIf="foption['Takeprofit'].errors['required']" class="text-danger">Takeprofit Type  is
+                                                          required.</span>
+                                                        </div> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="row">
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0"> Limit for that day</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="SpecificLimitofDay" placeholder="0" name="SpecificLimitofDay" />
+                                    <!-- <div *ngIf="isSubmitted && foption['SpecificLimitofDay'].errors">
+                                                      <span *ngIf="foption['SpecificLimitofDay'].errors['required']" class="text-danger">Stock Specific Limit for that day is
+                                                              required.</span>
+                                                    </div> -->
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Overall Capital Loss</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="OverallCapital" placeholder="0" name="OverallCapital" />
+                                    <!-- <div *ngIf="isSubmitted && foption['OverallCapital'].errors">
+                                                    <span *ngIf="foption['OverallCapital'].errors['required']" class="text-danger">Overall Capital Loss is
+                                                            required.</span>
+                                                  </div> -->
+
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Trailing Stop Loss</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="TrailingStopLoss" placeholder="0" name="TrailingStopLoss" />
+                                    <!-- <div *ngIf="isSubmitted && foption['TrailingStopLoss'].errors">
+                                                  <span *ngIf="foption['TrailingStopLoss'].errors['required']" class="text-danger">Trailing Stop Loss is
+                                                          required.</span>
+                                                </div> -->
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                        <div class="padding-bag-10" *ngIf="IsStopLoss">
+                          <div class="row">
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">B/S</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23" formControlName="CallType1">
+                                <option value="1" selected>Buy</option>
+                                <option value="2">Sell</option>
+                              </select>
+
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">CE/PE</label>
+                              <input type="text" class="form-control text-border mar-top-23" name="product" value="CE"
+                                required disabled />
+                              <!-- <div *ngIf="isSubmitted && foption['BrokerConfigID'].errors">
+                                              <span *ngIf="foption['BrokerConfigID'].errors['required']" class="text-danger">Broker Name  is
+                                              required.</span>
+                                            </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Lots</label>
+                              <input type="number" class="form-control text-border mar-top-23" name="product" required
+                                formControlName="OrderQuantity1" />
+                              <!-- <div *ngIf="isSubmitted && f['OrderQuantity1'].errors">
+                                              <span *ngIf="f['OrderQuantity1'].errors['required']" class="text-danger">Product Type  is
+                                              required.</span>
+                                            </div> -->
+                            </div>
+
+                            <!-- <div class="col-lg-6">
+                                                <div class="mb-3 filled tooltip-end-top">
+                                                  <label>Price </label>
+                                                  <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                                </div>
+                                              </div> -->
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Strike</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                formControlName="StratergyID2">
+                                <option value="" selected>Select Strike</option>
+                                <option value="{{mQ1.symbolIdentifierId}}" *ngFor="let mQ1 of toptionlistCEU1">
+                                  {{mQ1.strikePrice}}</option>
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['StratergyID1'].errors">
+                                                <span *ngIf="foption['StratergyID1'].errors['required']" class="text-danger">Stratergy Name  is
+                                                required.</span>
+                                            </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">Op Type</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                formControlName="OptionsType1">
+                                <option value="" selected>Select OptionsType </option>
+                                <option value="1" selected>ITM </option>
+                                <option value="2" selected>ATM </option>
+                                <option value="3" selected>OTM </option>
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['StratergyID'].errors">
+                                                  <span *ngIf="foption['StratergyID'].errors['required']" class="text-danger">Stratergy Name  is
+                                                  required.</span>
+                                              </div> -->
+                            </div>
+                            <div class="col-lg-1">
+                              <label class="mar-b-0">S/L Type</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                (change)="algotypechangeoption()" formControlName="AlgoType1">
+                                <!-- <option value="" selected>Select Product Type</option>  -->
+                                <option value="1">Pointwise</option>
+                                <option value="2">Percentage Wise</option>
+                                <option value="3">As per quantity </option>
+
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                            </div>
+                            <div class="col-lg-6 row" *ngIf="IsStopLoss">
+                              <div class="col-lg-6">
+                                <div class="row">
+
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Stop-loss</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss1}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Stoploss1"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Stoploss1'].errors">
+                                                          <span *ngIf="foption['Stoploss1'].errors['required']" class="text-danger">Stoploss Type  is
+                                                          required.</span>
+                                                        </div> -->
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Take Profit</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss1}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Takeprofit1"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Takeprofit1'].errors">
+                                                          <span *ngIf="foption['Takeprofit1'].errors['required']" class="text-danger">Takeprofit Type  is
+                                                          required.</span>
+                                                        </div> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="row">
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0"> Limit for that day</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="SpecificLimitofDay1" placeholder="0" name="SpecificLimitofDay" />
+                                    <!-- <div *ngIf="isSubmitted && foption['SpecificLimitofDay1'].errors">
+                                                      <span *ngIf="foption['SpecificLimitofDay1'].errors['required']" class="text-danger">Stock Specific Limit for that day is
+                                                              required.</span>
+                                                    </div> -->
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Overall Capital Loss</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="OverallCapital1" placeholder="0" name="OverallCapital" />
+                                    <!-- <div *ngIf="isSubmitted && foption['OverallCapital1'].errors">
+                                                    <span *ngIf="foption['OverallCapital1'].errors['required']" class="text-danger">Overall Capital Loss is
+                                                            required.</span>
+                                                  </div> -->
+
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Trailing Stop Loss</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="TrailingStopLoss1" placeholder="0" name="TrailingStopLoss" />
+                                    <!-- <div *ngIf="isSubmitted && foption['TrailingStopLoss1'].errors">
+                                                  <span *ngIf="foption['TrailingStopLoss1'].errors['required']" class="text-danger">Trailing Stop Loss is
+                                                          required.</span>
+                                                </div> -->
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="statergyID12">
+                        <div class="padding-bag-10" *ngIf="IsStopLoss">
+                          <div class="row">
+
+                            <div class="col-lg-2">
+                              <label class="mar-b-0">Lots</label>
+                              <input type="number" class="form-control text-border mar-top-23" name="product" required
+                                formControlName="OrderQuantity" />
+                              <!-- <div *ngIf="isSubmitted && foption['OrderQuantity'].errors">
+                                                <span *ngIf="foption['OrderQuantity'].errors['required']" class="text-danger">Product Type  is
+                                                required.</span>
+                                              </div> -->
+                            </div>
+                            <div class="col-lg-2">
+                              <label class="mar-b-0">S/L Type</label>
+                              <select class="nice-select wide wide1 form-select mar-top-23"
+                                (change)="algotypechangeoption()" formControlName="AlgoType">
+                                <!-- <option value="" selected>Select Product Type</option>  -->
+                                <option value="1">Pointwise</option>
+                                <option value="2">Percentage Wise</option>
+                                <option value="3">As per quantity </option>
+
+                              </select>
+                              <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                  <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                  required.</span>
+                                                </div> -->
+                            </div>
+                            <div class="col-lg-8 row" *ngIf="IsStopLoss">
+                              <div class="col-lg-6">
+                                <div class="row">
+
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Stop-loss</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Stoploss"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Stoploss'].errors">
+                                                            <span *ngIf="foption['Stoploss'].errors['required']" class="text-danger">Stoploss Type  is
+                                                            required.</span>
+                                                          </div> -->
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-6">
+                                    <div class="mb-3 filled tooltip-end-top">
+                                      <label class="mar-b-0">Take Profit</label> <label class="padding-top float-right"
+                                        style="color: green;">({{Stoploss}})</label>
+                                      <input class="form-control text-border mar-top-23" formControlName="Takeprofit"
+                                        placeholder="0" name="EstStockPrice2" />
+                                      <!-- <div *ngIf="isSubmitted && foption['Takeprofit'].errors">
+                                                            <span *ngIf="foption['Takeprofit'].errors['required']" class="text-danger">Takeprofit Type  is
+                                                            required.</span>
+                                                          </div> -->
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-lg-6">
+                                <div class="row">
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0"> Limit for that day</p>
+                                    <input type="number" class="form-control text-border mar-top-23"
+                                      formControlName="SpecificLimitofDay" placeholder="0" name="SpecificLimitofDay" />
+                                    <!-- <div *ngIf="isSubmitted && foption['SpecificLimitofDay'].errors">
+                                                        <span *ngIf="foption['SpecificLimitofDay'].errors['required']" class="text-danger">Stock Specific Limit for that day is
+                                                                required.</span>
+                                                      </div> -->
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Overall Capital Loss</p>
+                                    <input type="number" class="form-control text-border"
+                                      formControlName="OverallCapital" placeholder="0" name="OverallCapital" />
+                                    <!-- <div *ngIf="isSubmitted && foption['OverallCapital'].errors">
+                                                      <span *ngIf="foption['OverallCapital'].errors['required']" class="text-danger">Overall Capital Loss is
+                                                              required.</span>
+                                                    </div> -->
+
+                                  </div>
+                                  <div class=" col-sm-4 col-xl-4">
+                                    <p class="mar-b-0">Trailing Stop Loss</p>
+                                    <input type="number" class="form-control text-border mar-top-23"
+                                      formControlName="TrailingStopLoss" placeholder="0" name="TrailingStopLoss" />
+                                    <!-- <div *ngIf="isSubmitted && foption['TrailingStopLoss'].errors">
+                                                    <span *ngIf="foption['TrailingStopLoss'].errors['required']" class="text-danger">Trailing Stop Loss is
+                                                            required.</span>
+                                                  </div> -->
+
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+
+                          </div>
+
+                        </div>
+                      </div>
+                      <!-- Responsive Vertical End -->
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                  (click)="refracealgo()">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order"
+                  (click)="PostCustomerOptionsAlgo()">Save</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="pricesmodel2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelDefault"
+          aria-hidden="true">
+          <div class="modal-dialog" style="max-width: 90%;">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Manual Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="refracealgo()"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+
+                <form [formGroup]="CustomerOptionsform1">
+                  <div class="row">
+                    <div>
+                      <div class="mb-2">
+
+                        <div class="row" *ngIf="getdatawatchlist">
+                          <div class=" col-sm-8 col-xl-8">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}} :
+                              {{getdatawatchlist.buyPrice}}</p>
+                          </div>
+                          <div class=" col-sm-4 col-xl-4 text-right">
+                            <p class="mb-3 text-alternate"><span class="text-danger">Lot Size :
+                                {{getdatawatchlist.priceChangePercentage}}</span></p>
+                          </div>
+                        </div>
+                        <div class="row" *ngIf="getdatawatchlist">
+                          <div class=" col-sm-3 col-xl-3">
+                            <div class="mb-3 filled tooltip-end-top">
+                              <label class="mar-b-0">Symbol </label>
+                              <input class="form-control text-border" placeholder="{{getdatawatchlist.product}}"
+                                name="product" required disabled />
+
+                            </div>
+                          </div>
+
+                          <div class=" col-sm-3 col-xl-3">
+                            <label class="mar-b-0">Expiry</label>
+                            <select (change)="toptionlistallid2(getdatawatchlist.product)" id="expiry1"
+                              formControlName="expiryDate1" class=" nice-select wide wide1 form-select">
+                              <option value="{{mQ}}" *ngFor="let mQ of toptionexpiry">{{mQ}}</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['expiryDate1'].errors">
+                              <span *ngIf="fvalidayion['expiryDate1'].errors['required']" class="text-danger">Expiry
+                                Name is
+                                required.</span>
+                            </div>
+                          </div>
+
+                          <div class="col-lg-3">
+                            <label class="mar-b-0">Broker</label>
+                            <select class="nice-select wide wide1 form-select" formControlName="BrokerID">
+                              <option value="" selected>Select Broker</option>
+                              <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">
+                                {{mQ1.brokerName}}</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['BrokerID'].errors">
+                              <span *ngIf="fvalidayion['BrokerID'].errors['required']" class="text-danger">Broker is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-3">
+                            <label class="mar-b-0">Product Type</label>
+                            <select class="nice-select wide wide1 form-select" formControlName="ProductType">
+                              <option value="" selected>Select Product Type</option>
+                              <option value="1">CNC</option>
+                              <option value="2">MIS</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['ProductType'].errors">
+                              <span *ngIf="fvalidayion['ProductType'].errors['required']"
+                                class="text-danger">ProductType Name is
+                                required.</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- <div class="row" *ngIf="getdatawatchlist">
+                                            <div class=" col-sm-10 col-xl-10">
+                                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+                                              
+                                            </div>
+                                            <div class=" col-sm-2 col-xl-2">
+                                              <p class="mb-3 text-alternate"><span class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                                            </div>
+                                        </div> -->
+                      </div>
+
+                      <div class="padding-bag-10" *ngIf="IsStopLoss">
+                        <div class="row">
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">B/S</label>
+                            <select class="nice-select wide wide1 form-select mar-top-23" formControlName="CallType">
+                              <option value="1" selected>Buy</option>
+                              <option value="2">Sell</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['CallType'].errors">
+                              <span *ngIf="fvalidayion['CallType'].errors['required']" class="text-danger">CallType is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">CE/PE</label>
+                            <input type="text" class="form-control text-border mar-top-23" name="product" value="CE"
+                              required disabled />
+                            <!-- <div *ngIf="isSubmitted && foption['BrokerConfigID'].errors">
+                                              <span *ngIf="foption['BrokerConfigID'].errors['required']" class="text-danger">Broker Name  is
+                                              required.</span>
+                                            </div> -->
+                          </div>
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">Lots</label>
+                            <input type="number" class="form-control text-border mar-top-23" name="product" required
+                              formControlName="OrderQuantity" />
+                            <div *ngIf="isSubmitted && fvalidayion['OrderQuantity'].errors">
+                              <span *ngIf="fvalidayion['OrderQuantity'].errors['required']"
+                                class="text-danger">OrderQuantity is
+                                required.</span>
+                            </div>
+                          </div>
+
+                          <!-- <div class="col-lg-6">
+                                                <div class="mb-3 filled tooltip-end-top">
+                                                  <label>Price </label>
+                                                  <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                                </div>
+                                              </div> -->
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">Strike</label>
+                            <select class="nice-select wide wide1 form-select mar-top-23" formControlName="StrikeId">
+                              <option value="" selected>Select Strike</option>
+                              <option value="{{mQ1.symbolIdentifierId}}" *ngFor="let mQ1 of toptionlistCEU1">
+                                {{mQ1.strikePrice}}</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['StrikeId'].errors">
+                              <span *ngIf="fvalidayion['StrikeId'].errors['required']" class="text-danger">Strike is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="row ">
+                              <div class=" col-sm-6 col-xl-6">
+                                <p>Stop-loss</p>
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+                                <input type="hidden" class="customSwitchFilleddata"
+                                  formControlName="customSwitchFilleddata" name="customSwitchFilleddata" />
+                                <div class="form-check form-switch float-right">
+                                  <input type="checkbox" class="form-check-input" id="customSwitchFilled"
+                                    formControlName="customSwitchFilled" />
+                                </div>
+                              </div>
+                            </div>
+                            <input class="form-control text-border mar-top-15 SwitchFilled" formControlName="Stoploss"
+                              placeholder="0" name="EstStockPrice2" />
+                            <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="row">
+                              <div class=" col-sm-6 col-xl-6">
+                                <p>Take-profit</p>
+
+                              </div>
+
+                              <div class=" col-sm-3 col-xl-3">
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+                                <input type="hidden" class="customSwitchFilleddata1 "
+                                  formControlName="customSwitchFilleddata1" name="customSwitchFilleddata1" />
+                                <div class="form-check form-switch float-right">
+                                  <input type="checkbox" class="form-check-input" id="customSwitchFilled2"
+                                    formControlName="customSwitchFilled2" />
+                                </div>
+                              </div>
+                            </div>
+                            <input class="form-control text-border mar-top-15 SwitchFilled1"
+                              formControlName="Takeprofit" placeholder="0" name="EstStockPrice2" />
+                            <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                      <div class="padding-bag-10" *ngIf="IsStopLoss">
+                        <div class="row">
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">B/S</label>
+                            <select class="nice-select wide wide1 form-select mar-top-23" formControlName="CallType1">
+                              <option value="1" selected>Buy</option>
+                              <option value="2">Sell</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['CallType1'].errors">
+                              <span *ngIf="fvalidayion['CallType1'].errors['required']" class="text-danger">CallType is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">CE/PE</label>
+                            <input type="text" class="form-control text-border mar-top-23" name="product" value="PE"
+                              required disabled />
+
+                          </div>
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">Lots</label>
+                            <input type="number" class="form-control text-border mar-top-23" name="product" required
+                              formControlName="OrderQuantity1" />
+                            <div *ngIf="isSubmitted && fvalidayion['OrderQuantity1'].errors">
+                              <span *ngIf="fvalidayion['OrderQuantity1'].errors['required']"
+                                class="text-danger">OrderQuantity is
+                                required.</span>
+                            </div>
+                          </div>
+
+                          <!-- <div class="col-lg-6">
+                                                <div class="mb-3 filled tooltip-end-top">
+                                                  <label>Price </label>
+                                                  <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}" placeholder="Price" name="Price"  disabled/>
+                                                </div>
+                                              </div> -->
+                          <div class="col-lg-2">
+                            <label class="mar-b-0">Strike</label>
+                            <select class="nice-select wide wide1 form-select mar-top-23" formControlName="StrikeId1">
+                              <option value="" selected>Select Strike</option>
+                              <option value="{{mQ1.symbolIdentifierId}}" *ngFor="let mQ1 of optionlistPE1">
+                                {{mQ1.strikePrice}}</option>
+                            </select>
+                            <div *ngIf="isSubmitted && fvalidayion['StrikeId1'].errors">
+                              <span *ngIf="fvalidayion['StrikeId1'].errors['required']" class="text-danger">StrikeId is
+                                required.</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="row ">
+                              <div class=" col-sm-6 col-xl-6">
+                                <p>Stop-loss</p>
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+                                <input type="hidden" class="customSwitchFilleddata"
+                                  formControlName="customSwitchFilleddata2" name="customSwitchFilleddata" />
+                                <div class="form-check form-switch float-right">
+                                  <input type="checkbox" class="form-check-input" id="customSwitchFilled3"
+                                    formControlName="customSwitchFilled3" />
+                                </div>
+                              </div>
+                            </div>
+                            <input class="form-control text-border mar-top-15 SwitchFilled3" formControlName="Stoploss1"
+                              placeholder="0" name="EstStockPrice2" />
+                            <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                          </div>
+                          <div class="col-lg-2">
+                            <div class="row">
+                              <div class=" col-sm-6 col-xl-6">
+                                <p>Take-profit</p>
+
+                              </div>
+
+                              <div class=" col-sm-3 col-xl-3">
+                              </div>
+                              <div class=" col-sm-3 col-xl-3">
+                                <input type="hidden" class="customSwitchFilleddata1 "
+                                  formControlName="customSwitchFilleddata3" name="customSwitchFilleddata1" />
+                                <div class="form-check form-switch float-right">
+                                  <input type="checkbox" class="form-check-input" id="customSwitchFilled6"
+                                    formControlName="customSwitchFilled6" />
+                                </div>
+                              </div>
+                            </div>
+                            <input class="form-control text-border mar-top-15 SwitchFilled4"
+                              formControlName="Takeprofit1" placeholder="0" name="EstStockPrice2" />
+                            <!-- <div *ngIf="isSubmitted && foption['AlgoType'].errors">
+                                                <span *ngIf="foption['AlgoType'].errors['required']" class="text-danger">AlgoType Type  is
+                                                required.</span>
+                                              </div> -->
+                          </div>
+
+
+                        </div>
+
+                      </div>
+                      <!-- Responsive Vertical End -->
+                    </div>
+                  </div>
+                </form>
+
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                  (click)="refracealgo()">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order" (click)="maltiorder()">Place Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="detdata">
+                  <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div>
+                      <div class="mb-2">
+                        <label class="form-check w-100 mb-0">
+
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span
+                                  class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="row padding-10">
+                        <div class=" col-sm-6 col-xl-6">
+                          <p>Active Price Buy or Sell</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <div class="form-check form-switch float-right">
+                            <!-- <input type="checkbox" class="form-check-input" id="customSwitchFilled3" checked/> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" *ngIf="getdatawatchlist">
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label
+                              *ngIf="getdatawatchlist.QuotationLot==null || getdatawatchlist.QuotationLot==undefined || getdatawatchlist.QuotationLot==0">Lot
+                              Size ({{1}})</label>
+                            <label *ngIf="getdatawatchlist.QuotationLot>1">Lot Size ({{getdatawatchlist.QuotationLot
+                              }})</label>
+                            <input class="form-control text-border Quantity" formControlName="Quantity"
+                              placeholder="Quantity" name="Quantity" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label>Price </label>
+                            <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}"
+                              id="buyPricevalue" placeholder="Price" name="Price" disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Stop-loss</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata" formControlName="customSwitchFilleddata"
+                            name="customSwitchFilleddata" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled"
+                              formControlName="customSwitchFilled" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled padding-b-15">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice1" placeholder="0"
+                                  name="EstStockPrice1" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Take-profit</p>
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata1" formControlName="customSwitchFilleddata1"
+                            name="customSwitchFilleddata1" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled2"
+                              formControlName="customSwitchFilled2" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled1">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice2" placeholder="0"
+                                  name="EstStockPrice2" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Product Type</p>
+                        </div>
+
+                        <div class=" col-sm-9 col-xl-9 center">
+                          <select class="nice-select wide wide1 form-select" formControlName="ProductType1">
+                            <!-- <option value="" selected>Select Product Type</option>  -->
+                            <option value="1">CNC</option>
+                            <option value="2">MIS</option>
+                          </select>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Broker</p>
+                        </div>
+
+                        <div class=" col-sm-9 col-xl-9 center">
+                          <select class="nice-select wide wide1 form-select" formControlName="customerBrokertype">
+                            <option value="" selected>Select Broker</option>
+                            <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">
+                              {{mQ1.brokerName}}</option>
+                          </select>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Total Price</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3 center">
+                          <p class="totalprice" *ngIf="getdatawatchlist.QuotationLot==null">
+                            {{1*getdatawatchlist.buyPrice}}</p>
+                          <p class="totalprice" *ngIf="getdatawatchlist.QuotationLot>1">
+                            {{getdatawatchlist.QuotationLot*getdatawatchlist.buyPrice}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Responsive Vertical End -->
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order" data-bs-dismiss="modal"
+                  (click)="addPostCreateOrderbuy(0)">Place Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal5" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Order</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="detdata">
+                  <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div>
+                      <div class="mb-2">
+                        <label class="form-check w-100 mb-0">
+
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span
+                                  class="ma-right">{{getdatawatchlist.sellPrice}}</span></p>
+                            </div>
+                          </div>
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span
+                                  class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="row padding-10">
+                        <div class=" col-sm-6 col-xl-6">
+                          <p>Active Price Buy or Sell</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <div class="form-check form-switch float-right">
+                            <!-- <input type="checkbox" class="form-check-input" id="customSwitchFilled3" checked/> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" *ngIf="getdatawatchlist">
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label *ngIf="getdatawatchlist.QuotationLot==null">Lot Size ({{1}})</label>
+                            <label *ngIf="getdatawatchlist.QuotationLot>1">Lot Size ({{getdatawatchlist.QuotationLot
+                              }})</label>
+                            <input class="form-control text-border Quantity" formControlName="Quantity"
+                              placeholder="Quantity" name="Quantity" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label>Price </label>
+                            <input class="form-control Price text-border Price" value="{{getdatawatchlist.sellPrice}}"
+                              placeholder="Price" name="Price" disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Stop-loss</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata" formControlName="customSwitchFilleddata"
+                            name="customSwitchFilleddata" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled4"
+                              formControlName="customSwitchFilled" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled padding-b-15">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice1" placeholder="0"
+                                  name="EstStockPrice1" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Take-profit</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata1" formControlName="customSwitchFilleddata1"
+                            name="customSwitchFilleddata1" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled5"
+                              formControlName="customSwitchFilled2" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled1">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice2" placeholder="0"
+                                  name="EstStockPrice2" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Product Type</p>
+                        </div>
+
+                        <div class=" col-sm-9 col-xl-9 center">
+                          <select class="nice-select wide wide1 form-select" formControlName="ProductType1">
+                            <!-- <option value="" selected>Select Product Type</option>  -->
+                            <option value="1" selected>CNC</option>
+                            <option value="2">MIS</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Broker</p>
+                        </div>
+
+                        <div class=" col-sm-9 col-xl-9 center">
+                          <select class="nice-select wide wide1 form-select" formControlName="customerBrokertype">
+                            <option value="" selected>Select Broker</option>
+                            <option value="{{mQ1.brokerconfigID}}" *ngFor="let mQ1 of BrokerConfigList">
+                              {{mQ1.brokerName}}</option>
+                          </select>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Total Price</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3 center">
+                          <p class="totalprice" *ngIf="getdatawatchlist.QuotationLot==null">
+                            {{1*getdatawatchlist.buyPrice}}</p>
+                          <p class="totalprice" *ngIf="getdatawatchlist.QuotationLot>1">
+                            {{getdatawatchlist.QuotationLot*getdatawatchlist.buyPrice}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Responsive Vertical End -->
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order" data-bs-dismiss="modal"
+                  (click)="addPostCreateOrdershell(0)">Place Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault1"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body" *ngIf="getdatawatchlist">
+                <form [formGroup]="detdata">
+                  <div class="row">
+                    <div class="mb-2">
+                      <label class="form-check w-100 mb-0">
+
+                        <div class="row">
+                          <div class=" col-sm-10 col-xl-10">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                          </div>
+                          <div class=" col-sm-2 col-xl-2">
+                            <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class=" col-sm-10 col-xl-10">
+                            <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                          </div>
+                          <div class=" col-sm-2 col-xl-2">
+                            <p class="mb-3 text-alternate"><span
+                                class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                          </div>
+                        </div>
+                      </label>
+                    </div>
+                    <div class="col-lg-12 center">
+
+                      <button type="button" class="btn btn-success btn-icon btn-icon-start ms-1" data-bs-dismiss="modal"
+                        aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                          class="acorn-icons acorn-icons-arrow-top me-1">
+                          <path
+                            d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3">
+                          </path>
+                        </svg>
+                        <span>Buy</span>
+                      </button>
+                      <button type="button" class="btn btn-danger btn-icon btn-icon-start ms-1" data-bs-dismiss="modal"
+                        aria-label="Close" data-bs-toggle="modal" data-bs-target="#exampleModal5">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none"
+                          stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+                          class="acorn-icons acorn-icons-arrow-bottom me-1">
+                          <path
+                            d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17">
+                          </path>
+                        </svg>
+                        <span>Sell</span>
+                      </button>
+
+                    </div>
+                  </div>
+                  <div class="row o-h-l-p">
+                    <div class="col-lg-3 "><span>Open</span></div>
+                    <div class="col-lg-3"><span>High</span></div>
+                    <div class="col-lg-3"><span>Low</span></div>
+                    <div class="col-lg-3"><span>Prev.Close</span></div>
+                    <div class="col-lg-3 "><span>{{getdatawatchlist.openPrice}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.high}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.low}}</span></div>
+                    <div class="col-lg-3"><span>{{getdatawatchlist.closePrice}}</span></div>
+                  </div>
+                  <div class="row background">
+                    <div class="col-lg-6"><span>Volume</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.totalQtyTraded}}</span></div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-6"><span>Avg.Trade Price</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.averageTradedPrice}}</span></div>
+                  </div>
+                  <div class="row background">
+                    <div class="col-lg-6"><span>Last Traded Price</span></div>
+                    <div class="col-lg-6 text-right"><span>{{getdatawatchlist.lastTradePrice}}</span></div>
+                  </div>
+                </form>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="exampleModal4" tabindex="-1" role="dialog"
+          aria-labelledby="exampleModalLabelDefault" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header padding-full-15">
+                <h5 class="modal-title" id="exampleModalLabelDefault">Modify</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <form [formGroup]="detdata">
+                  <div class="row">
+                    <!-- Responsive Vertical Start -->
+                    <div>
+                      <div class="mb-2">
+                        <label class="form-check w-100 mb-0">
+
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.identifier}}</p>
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span class="ma-right">{{getdatawatchlist.buyPrice}}</span>
+                              </p>
+                            </div>
+                          </div>
+                          <div class="row" *ngIf="getdatawatchlist">
+                            <div class=" col-sm-10 col-xl-10">
+                              <p class="mb-3 text-alternate">{{getdatawatchlist.product}}</p>
+
+                            </div>
+                            <div class=" col-sm-2 col-xl-2">
+                              <p class="mb-3 text-alternate"><span
+                                  class="text-danger">{{getdatawatchlist.priceChangePercentage}}</span></p>
+                            </div>
+                          </div>
+                        </label>
+                      </div>
+                      <div class="row padding-10">
+                        <div class=" col-sm-6 col-xl-6">
+                          <p>Active Price Buy or Sell</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <div class="form-check form-switch float-right">
+                            <!-- <input type="checkbox" class="form-check-input" id="customSwitchFilled3" checked/> -->
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row" *ngIf="getdatawatchlist">
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label>Quantity </label>
+                            <input class="form-control text-border Quantity" (keyup)="changequantity()"
+                              formControlName="Quantity" placeholder="Quantity" name="Quantity" required />
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="mb-3 filled tooltip-end-top">
+                            <label>Price </label>
+                            <input class="form-control Price text-border Price" value="{{getdatawatchlist.buyPrice}}"
+                              placeholder="Price" name="Price" disabled />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Stop-loss</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata" formControlName="customSwitchFilleddata"
+                            name="customSwitchFilleddata" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled"
+                              formControlName="customSwitchFilled" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled padding-b-15">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice1" placeholder="0"
+                                  name="EstStockPrice1" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Take-profit</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+                          <input type="hidden" class="customSwitchFilleddata1" formControlName="customSwitchFilleddata1"
+                            name="customSwitchFilleddata1" />
+                          <div class="form-check form-switch float-right">
+                            <input type="checkbox" class="form-check-input" id="customSwitchFilled2"
+                              formControlName="customSwitchFilled2" />
+                          </div>
+                        </div>
+                      </div>
+                      <div class="SwitchFilled1">
+                        <div class="">
+                          <div class="row">
+                            <div class="col-lg-3">
+                              <div class="mb-3 filled tooltip-end-top">
+                                <label class="padding-top">Est. Stock Price: </label>
+                              </div>
+                            </div>
+                            <div class="col-lg-9">
+                              <div class="mb-3 filled tooltip-end-top">
+
+                                <input class="form-control text-border" formControlName="EstStockPrice2" placeholder="0"
+                                  name="EstStockPrice2" />
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Availble Fund</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3 center">
+                          <p>{{TotalFund}}</p>
+                        </div>
+                      </div>
+                      <div class="row padding-bag-10" *ngIf="getdatawatchlist">
+                        <div class=" col-sm-3 col-xl-3">
+                          <p>Total Price</p>
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3">
+
+                        </div>
+                        <div class=" col-sm-3 col-xl-3 center">
+                          <p class="totalprice">{{quantitystore}}</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Responsive Vertical End -->
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary Place-Order" data-bs-dismiss="modal"
+                  (click)="addPostCreateOrderbuy(0)">Place Order</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Scrollspy End -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Layout Footer Start -->
+
+  <!-- Layout Footer End -->

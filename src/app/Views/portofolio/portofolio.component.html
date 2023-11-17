@@ -1,0 +1,601 @@
+<app-header></app-header>
+<style>
+    @media (min-width: 576px){
+        .modal-dialog {
+            max-width: 550px;
+            
+        }
+    }
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+     .green {
+    color:#00FF7F!important;
+  }
+
+  .red {
+    color: #FF0000!important;
+  }
+    .form-switch.form-check .form-check-input{
+        border-radius: 13px;
+        width: 4em;
+        height: 2em;
+    }
+    p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+}
+p span{
+    margin-right: 10px;
+}
+.padding-15{
+      padding-top: 45px;
+    }
+    .padding-top{
+      padding-top: 10px;
+    }
+    .padding-full-15{
+      padding: 15px;
+    }
+    .padding-b-15{
+      margin-bottom: 20px
+    }
+    .padding-bag-15 {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+  }
+
+  .padding-bag-10 {
+    margin-top: 10px;
+    border-top: 1px solid #e8e5e5;
+    padding: 10px;
+    border-color: #585858;
+  }.padding-bag-15 {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+  }
+
+  .padding-bag-10 {
+    margin-top: 10px;
+    border-top: 1px solid #e8e5e5;
+    padding: 10px;
+    border-color: #585858;
+  }
+    .ma-right{
+      margin-right:15px;
+    }
+    .center{
+      text-align: center;
+    }
+    .o-h-l-p{
+      margin: 15px 0px;text-align: center;border: 1px solid;border-left: 0px;border-right: 0px;padding: 10px 0px;
+    }
+    .background{
+      background: gainsboro;
+    }
+    .padding-10{
+      padding: 10px 0px 0px 0px;
+    }
+    .float-right{
+      float: right;
+    }
+    .text-border{
+      border: 1px solid #e6e6e6;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #121212;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+}
+.mt-4 {
+    margin-top: 7.5rem !important;
+}
+
+  @media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+}
+.h-over {
+    max-height: auto;
+  }
+}
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 5.9rem !important;
+}
+.h-over {
+    max-height: 245px;
+    overflow: auto;
+  }
+  }
+  .card .card-body, .card .card-footer, .card .card-header {
+    padding: 10px 15px !important;
+}
+.dataTables_filter{
+  display: none;
+}
+</style>
+
+    <main>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="mb-5">
+              <div class="row g-2 nify-row d-flex mobileview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25">{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row g-2 desktopview">
+                <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                  <div class="card hover-scale-up cursor-pointer">
+                    <div class="h-100 row g-0 card-body align-items-center py-3">
+                     
+                      <div class="col">
+                        <div class="row gx-2 d-flex align-content-center">
+                          <div class="col-4 col-md-5 ">
+                            <div class="d-flex align-items-center lh-1-25">{{symbol.identifier}}</div>
+                            
+                          </div>
+                          <div class="col-4 col-md-2">
+                            <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                            <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                              
+                              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                              <span class="text-medium">{{symbol.priceChange}}</span>
+                            </div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                            <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                          </div>
+                          <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                            <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Title Start -->
+            <!-- <section class="scroll-section mt-4" id="title">
+              <div class="page-title-container">
+                <h1 class="mb-0 pb-0 display-4"> Logs </h1>
+                
+              </div>
+            </section> -->
+            <div>
+              <section class="scroll-section mt-4" id="buttons">
+                <div class="d-flex justify-content-between">
+                </div>
+                <ul class="nav nav-tabs nav-tabs-title nav-tabs-line-title responsive-tabs" id="lineTitleTabsContainer" role="tablist" style="margin-top: 40px;">
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="first" data-bs-toggle="tab" href="#firstLineTitleTab" role="tab" aria-selected="true" (click)="menulist(1)">Active</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="Pending" data-bs-toggle="tab" href="#PendingTab" role="tab" aria-selected="true" (click)="menulist(2)">Closed</a>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <a class="nav-link" id="endLine" data-bs-toggle="tab" href="#endLineTitleTab" role="tab" aria-selected="false" (click)="menulist(3)">Rejected</a>
+                    </li>
+                    
+                    <!-- An empty list to put overflowed links -->
+                    <li class="nav-item dropdown ms-auto pe-0 d-none responsive-tab-dropdown">
+                      <a
+                        class="btn btn-icon btn-icon-only btn-background pt-0 bg-transparent pe-0"
+                        href="#"
+                        data-bs-toggle="dropdown"
+                        aria-haspopup="true"
+                        aria-expanded="false"
+                      >
+                        <i data-acorn-icon="more-horizontal"></i>
+                      </a>
+                      <ul class="dropdown-menu mt-2 dropdown-menu-end"></ul>
+                    </li>
+                  </ul>
+                  <div class=" mb-5">
+                    <div class="card-body">
+                      <div class="tab-content">
+                        <div class="tab-pane fade" id="firstLineTitleTab" role="tabpanel" >
+                          <div class="row mb-3">
+                            <div class="col-lg-12 mar-t-b-right">
+                              <div class="row" [formGroup]="changeorder">
+                                <div class="col-lg-2">
+                                  <label>Stock Category</label>
+                                  <select id="FilterId1" (change)="getRecords_HistoricalList()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>Category All</option>
+                                    <option value="{{mQ.symbolCategoryID}}" *ngFor="let mQ of GetSymbolcatlist">{{mQ.symbolCategoryName}}</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2">
+                                  <label>P/L</label>
+                                  <select id="pandl" (change)="profitorder()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>All</option>
+                                    <option value="1">Profit</option>
+                                    <option value="2">Loss</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="totalpl>0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{totalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="totalpl<=0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{totalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="totalpl1>0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{totalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="totalpl1<=0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{totalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList!=null" style="margin-top: 25px">
+                                  <div>
+                                    Total Order: {{profitActiveOrderList.length}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList==null">
+                                  <div>
+                                    Total Order: 0
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-12 mb-5">
+                            <div class="data-table-responsive-wrapper card">
+                              <div class="card-body">
+                                <table class="data-table nowrap hover" style="overflow: auto;display: block;padding: 15px 0px 0px;">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-muted text-small text-uppercase">Id</th>
+                                      <!-- <th class="text-muted text-small text-uppercase">Customer</th> -->
+                                      <th class="text-muted text-small text-uppercase">Category</th>
+                                      <th class="text-muted text-small text-uppercase">Symbol</th>   
+                                      <th class="text-muted text-small text-uppercase">Type</th>
+                                      <th class="text-muted text-small text-uppercase">Order Type</th>
+                                      <th class="text-muted text-small text-uppercase">quantity</th>
+                                      <th class="text-muted text-small text-uppercase">TRIGGER</th>
+                                      <th class="text-muted text-small text-uppercase">LTP </th>
+                                      <th class="text-muted text-small text-uppercase">P/L</th>
+                                      <th class="text-muted text-small text-uppercase">Stratergy</th>
+                                      <th class="text-muted text-small text-uppercase">TGT</th>
+                                      <th class="text-muted text-small text-uppercase">SL</th>
+                                      <th class="text-muted text-small text-uppercase">Auto Trade</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Name</th>
+                                      <th class="text-muted text-small text-uppercase">Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order No</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr *ngFor="let order of profitActiveOrderList let i = index">
+                                      <td>{{order.userName}}</td>
+                                      <td>{{order.identifier}}</td>
+                                      <td>{{order.symbolCategoryName}}</td>
+                                      <td *ngIf="order.orderType==1" class="green"> Buy</td>
+                                      <td *ngIf="order.orderType==2" class="red"> Sell</td>
+                                      <td *ngIf="order.productType==1"> CNC</td>
+                                      <td *ngIf="order.productType==2"> MIS</td>
+                                      <td>{{order.quantity}}</td>
+                                      <td>{{order.entryPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green" id="td_LastBuyPrice_{{i}}_{{order.identifier}}">{{order.lastBuyPrice}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red" id="td_LastBuyPrice_{{i}}_{{order.identifier}}">{{order.lastBuyPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green" id="td_profitlost_{{i}}_{{order.identifier}}">{{order.profitLost}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red" id="td_profitlost_{{i}}_{{order.identifier}}">{{order.profitLost}}</td>
+                                      <td>{{order.stratergyName}}</td>
+                                      <td *ngIf="order.takeProfitEstPrice==null" class="green">0</td>
+                                      <td *ngIf="order.takeProfitEstPrice!=null" class="green">{{order.takeProfitEstPrice}}</td>
+                                      <td *ngIf="order.stopLossEstPrice==null"  class="red">0</td>
+                                      <td *ngIf="order.stopLossEstPrice!=null"  class="red">{{order.stopLossEstPrice}}</td>
+                                      <td *ngIf="order.iSAutoTrade==true"> Yes</td>
+                                      <td *ngIf="order.iSAutoTrade==false"> No</td>
+                                      <td>{{order.brokerName}}</td>
+                                      <td>{{order.orderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderNo}}<br>
+                                        {{order.brokerReason}}
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="PendingTab" role="tabpanel" >
+                          <div class="row mb-3">
+                            <div class="col-lg-12 mar-t-b-right">
+                              <div class="row" [formGroup]="changeorder">
+                                <div class="col-lg-2">
+                                  <label>Stock Category</label>
+                                  <select id="closeFilterId1" (change)="getRecords_HistoricalList1()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>Category All</option>
+                                    <option value="{{mQ.symbolCategoryID}}" *ngFor="let mQ of GetSymbolcatlist">{{mQ.symbolCategoryName}}</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2">
+                                  <label>P/L</label>
+                                  <select id="closepandl" (change)="profitorder1()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>All</option>
+                                    <option value="1">Profit</option>
+                                    <option value="2">Loss</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="closetotalpl>0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{closetotalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="closetotalpl<=0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{closetotalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="closetotalpl1>0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{closetotalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="closetotalpl1<=0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{closetotalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList1!=null" style="margin-top: 25px">
+                                  <div>
+                                    Total Order: {{profitActiveOrderList1.length}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList1==null">
+                                  <div>
+                                    Total Order: 0
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-12 mb-5">
+                            <div class="data-table-responsive-wrapper card">
+                              <div class="card-body">
+                                <table class="data-table nowrap hover" style="overflow: auto;display: block;padding: 15px 0px 0px;">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-muted text-small text-uppercase">Id</th>
+                                      <!-- <th class="text-muted text-small text-uppercase">Customer</th> -->
+                                      <th class="text-muted text-small text-uppercase">Category</th>
+                                      <th class="text-muted text-small text-uppercase">Symbol</th> 
+                                      <th class="text-muted text-small text-uppercase"> Type</th>  
+                                      <th class="text-muted text-small text-uppercase">Order Type</th>
+                                      <th class="text-muted text-small text-uppercase"> quantity</th>
+                                      <th class="text-muted text-small text-uppercase"> TRIGGER</th>
+                                      <th class="text-muted text-small text-uppercase">Closed Price </th>
+                                      <th class="text-muted text-small text-uppercase">P/L</th>
+                                      <th class="text-muted text-small text-uppercase">Stratergy</th>
+                                      <th class="text-muted text-small text-uppercase">TGT</th>
+                                      <th class="text-muted text-small text-uppercase">SL</th>
+                                      <th class="text-muted text-small text-uppercase">Auto Trade</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Name</th>
+                                      <th class="text-muted text-small text-uppercase">Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order No</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr *ngFor="let order of profitActiveOrderList1">
+                                      <td>{{order.userName}}</td>
+                                      <td>{{order.identifier}}</td>
+                                      <td>{{order.symbolCategoryName}}</td>
+                                      <td *ngIf="order.orderType==1" class="green"> Buy</td>
+                                      <td *ngIf="order.orderType==2" class="red"> Sell</td>
+                                      <td *ngIf="order.productType==1"> CNC</td>
+                                      <td *ngIf="order.productType==2"> MIS</td>
+                                      <td>{{order.quantity}}</td>
+                                      <td>{{order.entryPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green">{{order.closedPrice}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red">{{order.closedPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green">{{order.profitLost}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red">{{order.profitLost}}</td>
+                                      <td>{{order.stratergyName}}</td>
+                                      <td *ngIf="order.takeProfitEstPrice==null" class="green">0</td>
+                                      <td *ngIf="order.takeProfitEstPrice!=null" class="green">{{order.takeProfitEstPrice}}</td>
+                                      <td *ngIf="order.stopLossEstPrice==null"  class="red">0</td>
+                                      <td *ngIf="order.stopLossEstPrice!=null"  class="red">{{order.stopLossEstPrice}}</td>
+                                      <td *ngIf="order.iSAutoTrade==true"> Yes</td>
+                                      <td *ngIf="order.iSAutoTrade==false"> No</td>
+                                      <td>{{order.brokerName}}</td>
+                                      <td>{{order.orderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderNo}}<br>
+                                        {{order.brokerReason}}
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        <div class="tab-pane fade" id="endLineTitleTab" role="tabpanel">
+                          <div class="row mb-3">
+                            <div class="col-lg-12 mar-t-b-right">
+                              <div class="row" [formGroup]="changeorder">
+                                <div class="col-lg-2">
+                                  <label>Stock Category</label>
+                                  <select id="rejectFilterId1" (change)="getRecords_HistoricalList2()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>Category All</option>
+                                    <option value="{{mQ.symbolCategoryID}}" *ngFor="let mQ of GetSymbolcatlist">{{mQ.symbolCategoryName}}</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2">
+                                  <label>P/L</label>
+                                  <select id="rejectpandl" (change)="profitorder2()" class="mb-2 nice-select wide wide1 form-select">
+                                    <option value="0" selected>All</option>
+                                    <option value="1">Profit</option>
+                                    <option value="2">Loss</option>
+                                  </select>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="rejecttotalpl>0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{rejecttotalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="rejecttotalpl<=0" style="margin-top: 25px">
+                                  <div>
+                                    Total Profit & Loss: {{rejecttotalpl}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right green" *ngIf="rejecttotalpl1>0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{rejecttotalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right red" *ngIf="rejecttotalpl1<=0" style="margin-top: 25px">
+                                  <div>
+                                    Live Account PNL: {{rejecttotalpl1}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList2!=null" style="margin-top: 25px">
+                                  <div>
+                                    Total Order: {{profitActiveOrderList2.length}}
+                                  </div>
+                                </div>
+                                <div class="col-lg-2 text-right" *ngIf="profitActiveOrderList2==null">
+                                  <div>
+                                    Total Order: 0
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-xl-12 mb-5">
+                            <div class="data-table-responsive-wrapper card">
+                              <div class="card-body">
+                                <table class="data-table nowrap hover" style="overflow: auto;display: block;padding: 15px 0px 0px;">
+                                  <thead>
+                                    <tr>
+                                      <th class="text-muted text-small text-uppercase">Id</th>
+                                      <!-- <th class="text-muted text-small text-uppercase">Customer</th> -->
+                                      <th class="text-muted text-small text-uppercase">Category</th>
+                                      <th class="text-muted text-small text-uppercase">Symbol</th>   
+                                      <th class="text-muted text-small text-uppercase">Type</th>
+                                      <th class="text-muted text-small text-uppercase">Order Type</th>
+                                      <th class="text-muted text-small text-uppercase"> quantity</th>
+                                      <th class="text-muted text-small text-uppercase"> TRIGGER</th>
+                                      <th class="text-muted text-small text-uppercase">LTP </th>
+                                      <th class="text-muted text-small text-uppercase">P/L</th>
+                                      <th class="text-muted text-small text-uppercase">Stratergy</th>
+                                      <th class="text-muted text-small text-uppercase">TGT</th>
+                                      <th class="text-muted text-small text-uppercase">SL</th>
+                                      <th class="text-muted text-small text-uppercase">Auto Trade</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Name</th>
+                                      <th class="text-muted text-small text-uppercase">Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order Date</th>
+                                      <th class="text-muted text-small text-uppercase">Broker Order No</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr *ngFor="let order of profitActiveOrderList2">
+                                      <td>{{order.userName}}</td>
+                                      <td>{{order.identifier}}</td>
+                                      <td>{{order.symbolCategoryName}}</td>
+                                      <td *ngIf="order.orderType==1" class="green"> Buy</td>
+                                      <td *ngIf="order.orderType==2" class="red"> Sell</td>
+                                      <td *ngIf="order.productType==1"> CNC</td>
+                                      <td *ngIf="order.productType==2"> MIS</td>
+                                      <td>{{order.quantity}}</td>
+                                      <td>{{order.entryPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green">{{order.lastBuyPrice}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red">{{order.lastBuyPrice}}</td>
+                                      <td *ngIf="order.profitLost>0" class="green">{{order.profitLost}}</td>
+                                      <td *ngIf="order.profitLost<=0" class="red">{{order.profitLost}}</td>
+                                      <td>{{order.stratergyName}}</td>
+                                      <td *ngIf="order.takeProfitEstPrice==null" class="green">0</td>
+                                      <td *ngIf="order.takeProfitEstPrice!=null" class="green">{{order.takeProfitEstPrice}}</td>
+                                      <td *ngIf="order.stopLossEstPrice==null"  class="red">0</td>
+                                      <td *ngIf="order.stopLossEstPrice!=null"  class="red">{{order.stopLossEstPrice}}</td>
+                                      <td *ngIf="order.iSAutoTrade==true"> Yes</td>
+                                      <td *ngIf="order.iSAutoTrade==false"> No</td>
+                                      <td>{{order.brokerName}}</td>
+                                      <td>{{order.orderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderDate | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                                      <td>{{order.brokerOrderNo}}<br>
+                                        {{order.brokerReason}}
+                                      </td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              
+                            </div>
+                          </div>
+                        </div>
+                        </div>
+                      </div>
+                    </div>
+                
+              </section>
+            <div>
+              
+              </div>
+              
+              <!-- Buttons End -->
+            </div>
+            <!-- Title End -->
+            </div>
+          <!-- Scrollspy End -->
+        </div>
+      </div>
+    </main>
+
+    <!-- Layout Footer Start -->
+    

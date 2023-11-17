@@ -1,0 +1,244 @@
+<app-header></app-header>
+<style>
+    @media (min-width: 576px){
+        .modal-dialog {
+            max-width: 550px;
+            
+        }
+    }
+    .mb-4 {
+        margin-bottom: 0.5rem !important;
+    }
+     .green {
+    color:#00FF7F!important;
+  }
+  
+  .red {
+    color: #FF0000!important;
+  }
+    .form-switch.form-check .form-check-input{
+        border-radius: 13px;
+        width: 4em;
+        height: 2em;
+    }
+    p {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+  p span{
+    margin-right: 10px;
+  }
+  .padding-15{
+      padding-top: 45px;
+    }
+    .padding-top{
+      padding-top: 10px;
+    }
+    .padding-full-15{
+      padding: 15px;
+    }
+    .padding-b-15{
+      margin-bottom: 20px
+    }
+    .padding-bag-15 {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+  }
+  
+  .padding-bag-10 {
+    margin-top: 10px;
+    border-top: 1px solid #e8e5e5;
+    padding: 10px;
+    border-color: #585858;
+  }.padding-bag-15 {
+    border: 1px solid #dbdbdb;
+    padding: 15px;
+  }
+  
+  .padding-bag-10 {
+    margin-top: 10px;
+    border-top: 1px solid #e8e5e5;
+    padding: 10px;
+    border-color: #585858;
+  }
+    .ma-right{
+      margin-right:15px;
+    }
+    .center{
+      text-align: center;
+    }
+    .o-h-l-p{
+      margin: 15px 0px;text-align: center;border: 1px solid;border-left: 0px;border-right: 0px;padding: 10px 0px;
+    }
+    .background{
+      background: gainsboro;
+    }
+    .padding-10{
+      padding: 10px 0px 0px 0px;
+    }
+    .float-right{
+      float: right;
+    }
+    .text-border{
+      border: 1px solid #e6e6e6;
+    }
+    .text-right{
+      text-align: right;
+    }
+    .nify-row{
+  position: fixed;
+      top: 80px;
+      padding-bottom: 15px;
+    background: #FFF !important;
+      right: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+  }
+  .mt-4 {
+    margin-top: 7.5rem !important;
+  }
+  
+  @media (max-width: 991px) {
+  .mt-4 {
+    margin-top: 0.5rem !important;
+  }
+  .h-over {
+    max-height: auto;
+  }
+  }
+  @media (min-width: 992px) {
+  .mt-4 {
+    margin-top: 7.9rem !important;
+  }
+  .h-over {
+    max-height: 240px;
+    overflow: auto;
+  }
+  }
+  </style>
+<main>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="mb-5">
+            <div class="row g-2 nify-row d-flex mobileview">
+              <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                <div class="card hover-scale-up cursor-pointer">
+                  <div class="h-100 row g-0 card-body align-items-center py-3">
+                   
+                    <div class="col">
+                      <div class="row gx-2 d-flex align-content-center">
+                        <div class="col-4 col-md-5 ">
+                          <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;">{{symbol.identifier}}</div>
+                          
+                        </div>
+                        <div class="col-4 col-md-2">
+                          <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                          <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                          <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                          <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row g-2 desktopview">
+              <div class="col-12 col-md-4 col-lg-4" *ngFor="let symbol of GetHeaderSymbol">
+                <div class="card hover-scale-up cursor-pointer">
+                  <div class="h-100 row g-0 card-body align-items-center py-3">
+                   
+                    <div class="col">
+                      <div class="row gx-2 d-flex align-content-center">
+                        <div class="col-4 col-md-5 ">
+                          <div class="d-flex align-items-center lh-1-25" style="color:#000000!important; font-weight:600;" >{{symbol.identifier}}</div>
+                          
+                        </div>
+                        <div class="col-4 col-md-2">
+                          <div class="d-flex align-items-center lh-1-25 text-success" *ngIf="symbol.priceChange>=0">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" _ngcontent-serverapp-c54="" class="acorn-icons acorn-icons-arrow-top me-1"><path d="M3 9 9.64645 2.35355C9.84171 2.15829 10.1583 2.15829 10.3536 2.35355L17 9M10 18 10 3"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                          <div class="d-flex align-items-center lh-1-25 text-danger" *ngIf="symbol.priceChange<0">
+                            
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="acorn-icons acorn-icons-arrow-bottom me-1"><path d="M17 11 10.3536 17.6464C10.1583 17.8417 9.84171 17.8417 9.64645 17.6464L3 11M10 2 10 17"></path></svg>
+                            <span class="text-medium">{{symbol.priceChange}}</span>
+                          </div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange>=0">
+                          <div class="cta-2 text_value green">{{symbol.lastTradePrice}}</div>
+                        </div>
+                        <div class="col-4 col-md-5 text-right" *ngIf="symbol.priceChange<0">
+                          <div class="cta-2 text_value1 red">{{symbol.lastTradePrice}}</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Title Start -->
+          <section class="scroll-section mt-4" id="title">
+            <div class="page-title-container">
+              <h1 class="mb-0 pb-0 display-4"> Notifications </h1>
+              
+            </div>
+          </section>
+          <div class="card mb-2" *ngIf="NotificationByUserID==null|| NotificationByUserID==''">
+            <div class="row g-0 sh-14">
+
+              <div class="col">
+                <div class="card-body pt-0 pb-0 h-100">
+                  <div class="row g-0 h-100 align-content-center">
+                    <h3 class="text-center">No Notification</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card mb-2 " *ngFor="let mQ of NotificationByUserID">
+            <div class="row g-0 ">
+
+                <div class="col">
+                    <div class="card-body">
+                        <div class="row g-0 h-100 align-content-center">
+                            <div class="col-lg-12">
+                                <div class="row">
+                                    <div class="col-lg-1 text-center">
+                                        <img src="assets/img/profile/user.png" class="rounded-xl align-self-center"
+                                        alt="..." />
+                                    </div>
+                                    <div class="col-lg-11">
+                                        <div class="align-self-center">
+                                            <p class="mar-b-0">{{mQ.notificationSubject}}</p>
+                                            <p class="mar-b-0">{{mQ.activityDescription}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        <!-- Title End -->
+        </div>
+      <!-- Scrollspy End -->
+    </div>
+</main>
